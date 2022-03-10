@@ -26,12 +26,9 @@ namespace LibreriaClassiPrenotazioneCamere
 
     public class Cliente : Persona
     {
-        public string Città { get; }
-        public string Provincia { get; }
-        public Cliente(string n, string c, string cf, string email, int tel, string cit, string p) : base(n, c, cf, email, tel)
+        public Cliente(string n, string c, string cf, string email, int tel) : base(n, c, cf, email, tel)
         {
-            Città = cit;
-            Provincia = p;
+
         }
     }
 }
