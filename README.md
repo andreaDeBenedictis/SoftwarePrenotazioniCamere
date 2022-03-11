@@ -3,6 +3,8 @@ Titolare -> Andrea De Benedictis
 
 Contributori -> Andrea De Benedictis - Samuele Arcangeli
 
+Diagramma di Gantt -> https://docs.google.com/spreadsheets/d/1Z77nHhZ8kUrcTdD8WWOezdMV4wD8zon0iHgYNs_IJHU/edit?usp=sharing
+
 Descrizione -> Software per la gestione delle prenotazioni delle camere di un albergo.
 I clienti sono individuati da: codice fiscale, cognome, nome, città, provincia, e-mail,
 telefono e cellulare. Ogni camera è individuata da un numero, una descrizione e la
