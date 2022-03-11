@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAccedi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegistrati = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -46,16 +46,17 @@
             this.textBox1.Size = new System.Drawing.Size(400, 23);
             this.textBox1.TabIndex = 0;
             // 
-            // button1
+            // btnAccedi
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(68, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(311, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Accedi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAccedi.BackColor = System.Drawing.Color.White;
+            this.btnAccedi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAccedi.Location = new System.Drawing.Point(68, 240);
+            this.btnAccedi.Name = "btnAccedi";
+            this.btnAccedi.Size = new System.Drawing.Size(311, 50);
+            this.btnAccedi.TabIndex = 1;
+            this.btnAccedi.Text = "Accedi";
+            this.btnAccedi.UseVisualStyleBackColor = false;
+            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
             // label1
             // 
@@ -114,16 +115,17 @@
             this.textBox3.Size = new System.Drawing.Size(400, 23);
             this.textBox3.TabIndex = 6;
             // 
-            // button2
+            // btnRegistrati
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(458, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 50);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Registrati";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRegistrati.BackColor = System.Drawing.Color.White;
+            this.btnRegistrati.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrati.Location = new System.Drawing.Point(458, 151);
+            this.btnRegistrati.Name = "btnRegistrati";
+            this.btnRegistrati.Size = new System.Drawing.Size(311, 50);
+            this.btnRegistrati.TabIndex = 8;
+            this.btnRegistrati.Text = "Registrati";
+            this.btnRegistrati.UseVisualStyleBackColor = false;
+            this.btnRegistrati.Click += new System.EventHandler(this.btnRegistrati_Click);
             // 
             // FormAccesso
             // 
@@ -131,14 +133,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 332);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAccedi);
             this.Controls.Add(this.textBox1);
             this.Name = "FormAccesso";
             this.Text = "FormAccesso";
@@ -150,13 +152,13 @@
         #endregion
 
         private TextBox textBox1;
-        private Button button1;
+        private Button btnAccedi;
         private Label label1;
         private Label label2;
         private Label label3;
         private TextBox textBox2;
         private Label label4;
         private TextBox textBox3;
-        private Button button2;
+        private Button btnRegistrati;
     }
 }

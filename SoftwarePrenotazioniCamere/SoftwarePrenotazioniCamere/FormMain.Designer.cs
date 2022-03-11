@@ -31,7 +31,8 @@
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMainDipendente = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegistrati = new System.Windows.Forms.Button();
+            this.btnAccedi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCatalogo
@@ -39,10 +40,9 @@
             this.btnCatalogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCatalogo.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCatalogo.Location = new System.Drawing.Point(281, 338);
-            this.btnCatalogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCatalogo.Location = new System.Drawing.Point(90, 208);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(571, 95);
+            this.btnCatalogo.Size = new System.Drawing.Size(400, 57);
             this.btnCatalogo.TabIndex = 0;
             this.btnCatalogo.Text = "Catalogo camere disponibili";
             this.btnCatalogo.UseVisualStyleBackColor = false;
@@ -51,10 +51,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(281, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(90, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(571, 155);
+            this.label1.Size = new System.Drawing.Size(400, 93);
             this.label1.TabIndex = 1;
             this.label1.Text = "Albergo Girasole";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,40 +63,53 @@
             this.btnMainDipendente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMainDipendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnMainDipendente.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMainDipendente.Location = new System.Drawing.Point(281, 488);
-            this.btnMainDipendente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMainDipendente.Location = new System.Drawing.Point(90, 308);
             this.btnMainDipendente.Name = "btnMainDipendente";
-            this.btnMainDipendente.Size = new System.Drawing.Size(571, 95);
+            this.btnMainDipendente.Size = new System.Drawing.Size(400, 57);
             this.btnMainDipendente.TabIndex = 2;
             this.btnMainDipendente.Text = "Accedi da dipendente";
             this.btnMainDipendente.UseVisualStyleBackColor = false;
             this.btnMainDipendente.Click += new System.EventHandler(this.btnMainDipendente_Click);
             // 
-            // button2
+            // btnRegistrati
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(984, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(141, 70);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Registrati";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRegistrati.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistrati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRegistrati.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrati.Location = new System.Drawing.Point(391, 12);
+            this.btnRegistrati.Name = "btnRegistrati";
+            this.btnRegistrati.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnRegistrati.Size = new System.Drawing.Size(99, 42);
+            this.btnRegistrati.TabIndex = 3;
+            this.btnRegistrati.Text = "Registrati";
+            this.btnRegistrati.UseVisualStyleBackColor = false;
+            this.btnRegistrati.Click += new System.EventHandler(this.btnRegistrati_Click);
+            // 
+            // btnAccedi
+            // 
+            this.btnAccedi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAccedi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAccedi.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAccedi.Location = new System.Drawing.Point(90, 12);
+            this.btnAccedi.Name = "btnAccedi";
+            this.btnAccedi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAccedi.Size = new System.Drawing.Size(99, 42);
+            this.btnAccedi.TabIndex = 4;
+            this.btnAccedi.Text = "Accedi";
+            this.btnAccedi.UseVisualStyleBackColor = false;
+            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1143, 702);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(581, 420);
+            this.Controls.Add(this.btnAccedi);
+            this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.btnMainDipendente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCatalogo);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMain";
             this.Text = "Main";
             this.ResumeLayout(false);
@@ -109,6 +121,7 @@
         private Button btnCatalogo;
         private Label label1;
         private Button btnMainDipendente;
-        private Button button2;
+        private Button btnRegistrati;
+        private Button btnAccedi;
     }
 }

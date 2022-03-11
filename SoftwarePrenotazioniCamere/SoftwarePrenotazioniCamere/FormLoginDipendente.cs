@@ -17,16 +17,18 @@ namespace SoftwarePrenotazioniCamere
             InitializeComponent();
         }
 
-        private void boxPassword_TextChanged(object sender, EventArgs e)
+        private void btnInvia_Click(object sender, EventArgs e)
         {
             lblErrore.Text = "";
             if (boxPassword.Text == "passwordSegreta")
             {
+                boxPassword.Text = "";
                 FormMainDipendente formDipendente = new FormMainDipendente();
                 formDipendente.ShowDialog();
             }
             else
             {
+                boxPassword.Text = "";
                 lblErrore.Text = "Password sbagliata, riprovare...";
             }
         }

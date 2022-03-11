@@ -36,5 +36,11 @@ namespace SoftwarePrenotazioniCamere
             FormCatalogo catalogo = new FormCatalogo();
             catalogo.ShowDialog();
         }
+
+        private void btnAccedi_Click(object sender, EventArgs e)
+        {
+            FormAccesso formAccesso = new FormAccesso();
+            formAccesso.ShowDialog();   
+        }
     }
 }

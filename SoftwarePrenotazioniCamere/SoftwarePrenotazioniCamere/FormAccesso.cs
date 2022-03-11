@@ -16,5 +16,21 @@ namespace SoftwarePrenotazioniCamere
         {
             InitializeComponent();
         }
+
+        private void btnRegistrati_Click(object sender, EventArgs e)
+        {
+            FormRegistrazione formRegistrazione = new FormRegistrazione();
+            formRegistrazione.ShowDialog();
+        }
+
+        private void btnAccedi_Click(object sender, EventArgs e)
+        {
+            //foreach (Cliente c in collection)
+            //{
+
+            //}
+            FormCatalogo formCatalogo = new FormCatalogo();
+            formCatalogo.ShowDialog();
+        }
     }
 }

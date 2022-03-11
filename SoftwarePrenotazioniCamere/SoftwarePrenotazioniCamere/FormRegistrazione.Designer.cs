@@ -47,50 +47,45 @@
             // 
             this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(41, 242);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(29, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 37);
+            this.label4.Size = new System.Drawing.Size(119, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Codice Fiscale";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxCodiceFiscale
             // 
-            this.boxCodiceFiscale.Location = new System.Drawing.Point(41, 283);
-            this.boxCodiceFiscale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.boxCodiceFiscale.Location = new System.Drawing.Point(29, 170);
             this.boxCodiceFiscale.Name = "boxCodiceFiscale";
-            this.boxCodiceFiscale.Size = new System.Drawing.Size(570, 31);
+            this.boxCodiceFiscale.Size = new System.Drawing.Size(400, 23);
             this.boxCodiceFiscale.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(41, 157);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(29, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 37);
+            this.label3.Size = new System.Drawing.Size(82, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Cognome";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxCognome
             // 
-            this.boxCognome.Location = new System.Drawing.Point(41, 198);
-            this.boxCognome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.boxCognome.Location = new System.Drawing.Point(29, 119);
             this.boxCognome.Name = "boxCognome";
-            this.boxCognome.Size = new System.Drawing.Size(570, 31);
+            this.boxCognome.Size = new System.Drawing.Size(400, 23);
             this.boxCognome.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(41, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(29, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 37);
+            this.label2.Size = new System.Drawing.Size(59, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +94,9 @@
             // 
             this.btnRegistrati.BackColor = System.Drawing.Color.White;
             this.btnRegistrati.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrati.Location = new System.Drawing.Point(106, 538);
-            this.btnRegistrati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrati.Location = new System.Drawing.Point(74, 323);
             this.btnRegistrati.Name = "btnRegistrati";
-            this.btnRegistrati.Size = new System.Drawing.Size(444, 83);
+            this.btnRegistrati.Size = new System.Drawing.Size(311, 50);
             this.btnRegistrati.TabIndex = 9;
             this.btnRegistrati.Text = "Registrati";
             this.btnRegistrati.UseVisualStyleBackColor = false;
@@ -110,59 +104,53 @@
             // 
             // boxNome
             // 
-            this.boxNome.Location = new System.Drawing.Point(41, 113);
-            this.boxNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.boxNome.Location = new System.Drawing.Point(29, 68);
             this.boxNome.Name = "boxNome";
-            this.boxNome.Size = new System.Drawing.Size(570, 31);
+            this.boxNome.Size = new System.Drawing.Size(400, 23);
             this.boxNome.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(41, 327);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(29, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 37);
+            this.label1.Size = new System.Drawing.Size(50, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "Email";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxEmail
             // 
-            this.boxEmail.Location = new System.Drawing.Point(41, 368);
-            this.boxEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.boxEmail.Location = new System.Drawing.Point(29, 221);
             this.boxEmail.Name = "boxEmail";
-            this.boxEmail.Size = new System.Drawing.Size(570, 31);
+            this.boxEmail.Size = new System.Drawing.Size(400, 23);
             this.boxEmail.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(41, 412);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(29, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 37);
+            this.label5.Size = new System.Drawing.Size(82, 22);
             this.label5.TabIndex = 18;
             this.label5.Text = "Telefono";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxTelefono
             // 
-            this.boxTelefono.Location = new System.Drawing.Point(41, 453);
-            this.boxTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.boxTelefono.Location = new System.Drawing.Point(29, 272);
             this.boxTelefono.Name = "boxTelefono";
-            this.boxTelefono.Size = new System.Drawing.Size(570, 31);
+            this.boxTelefono.Size = new System.Drawing.Size(400, 23);
             this.boxTelefono.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(651, 188);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(456, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(444, 90);
+            this.label6.Size = new System.Drawing.Size(311, 54);
             this.label6.TabIndex = 19;
             this.label6.Text = "Sei già registrato?";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,20 +159,20 @@
             // 
             this.btnAccedi.BackColor = System.Drawing.Color.White;
             this.btnAccedi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccedi.Location = new System.Drawing.Point(651, 327);
-            this.btnAccedi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAccedi.Location = new System.Drawing.Point(456, 196);
             this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.Size = new System.Drawing.Size(444, 83);
+            this.btnAccedi.Size = new System.Drawing.Size(311, 50);
             this.btnAccedi.TabIndex = 20;
             this.btnAccedi.Text = "Accedi";
             this.btnAccedi.UseVisualStyleBackColor = false;
+            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
             // FormRegistrazione
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1143, 698);
+            this.ClientSize = new System.Drawing.Size(800, 419);
             this.Controls.Add(this.btnAccedi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -198,7 +186,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.boxNome);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormRegistrazione";
             this.Text = "FormRegistrazione";
             this.Load += new System.EventHandler(this.FormRegistrazione_Load);
