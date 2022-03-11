@@ -27,6 +27,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPiano1_Click(object sender, EventArgs e)
         {
+            boxListaCamere.Items.Clear();
             boxListaCamere.DataSource = null;
             foreach (Camera c in albergoGirasole.Piano1)
             {
@@ -36,6 +37,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPiano2_Click(object sender, EventArgs e)
         {
+            boxListaCamere.Items.Clear();
             boxListaCamere.DataSource = null;
             foreach (Camera c in albergoGirasole.Piano2)
             {
@@ -45,7 +47,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPiano3_Click(object sender, EventArgs e)
         {
-
+            boxListaCamere.Items.Clear();
             boxListaCamere.DataSource = null;
             foreach (Camera c in albergoGirasole.Piano3)
             {
