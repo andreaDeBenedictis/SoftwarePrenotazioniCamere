@@ -28,19 +28,29 @@ namespace SoftwarePrenotazioniCamere
         private void btnPiano1_Click(object sender, EventArgs e)
         {
             boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano1;
+            foreach (Camera c in albergoGirasole.Piano1)
+            {
+                boxListaCamere.Items.Add(c.GetInfo());
+            }
         }
 
         private void btnPiano2_Click(object sender, EventArgs e)
         {
             boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano2;
+            foreach (Camera c in albergoGirasole.Piano2)
+            {
+                boxListaCamere.Items.Add(c.GetInfo());
+            }
         }
 
         private void btnPiano3_Click(object sender, EventArgs e)
         {
+
             boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano3;
+            foreach (Camera c in albergoGirasole.Piano3)
+            {
+                boxListaCamere.Items.Add(c.GetInfo());
+            }
         }
     }
 }

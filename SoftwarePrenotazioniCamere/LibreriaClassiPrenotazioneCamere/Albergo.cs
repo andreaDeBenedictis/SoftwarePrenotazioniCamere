@@ -35,8 +35,7 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public void RiempiListaCamere()
         {
-            Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 11; i++)
             {
                 
                 if (i <= 5 && i != 0)

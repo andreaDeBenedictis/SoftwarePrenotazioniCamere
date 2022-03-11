@@ -15,8 +15,13 @@ namespace LibreriaClassiPrenotazioneCamere
         {
             Numero = n;
             Tipo = t;
-            if (Tipo) Descrizione = "Camera singola, 1 letto, 1 bagno";
-            else Descrizione = "Camera doppia, 2 letti, 1 bagno";
+            if (Tipo) Descrizione = "Camera " + Numero +  ". Singola, 1 letto, 1 bagno";
+            else Descrizione = "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
+        }
+
+        public string GetInfo()
+        {
+            return Descrizione;
         }
     }
 }
