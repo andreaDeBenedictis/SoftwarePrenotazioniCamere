@@ -23,6 +23,7 @@ namespace SoftwarePrenotazioniCamere
 
         }
 
+        Albergo albergoGirasole = new Albergo();
         private void btnRegistrati_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente
@@ -33,6 +34,8 @@ namespace SoftwarePrenotazioniCamere
                   int.Parse(boxTelefono.Text)
                 );
 
+            albergoGirasole.AggiungiCliente(c);
+
             FormCatalogo catalogo = new FormCatalogo();
             catalogo.ShowDialog();
         }
@@ -41,6 +44,11 @@ namespace SoftwarePrenotazioniCamere
         {
             FormAccesso formAccesso = new FormAccesso();
             formAccesso.ShowDialog();   
+        }
+
+        public void RegistrazioneFoglio()
+        {
+                
         }
     }
 }
