@@ -19,7 +19,7 @@ namespace LibreriaClassiPrenotazioneCamere
             else Descrizione = "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             return Descrizione;
         }

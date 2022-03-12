@@ -30,5 +30,10 @@ namespace LibreriaClassiPrenotazioneCamere
         {
 
         }
+
+        public override string ToString()
+        {
+            return Nome + "; " + Cognome + "; " + CodiceFiscale + "; " + Email + "; " + RecapitoTelefonico + "; ";
+        }
     }
 }

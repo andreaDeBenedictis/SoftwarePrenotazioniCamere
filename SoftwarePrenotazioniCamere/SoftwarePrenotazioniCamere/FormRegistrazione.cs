@@ -36,8 +36,10 @@ namespace SoftwarePrenotazioniCamere
 
             albergoGirasole.AggiungiCliente(c);
 
-            FormCatalogo catalogo = new FormCatalogo();
-            catalogo.ShowDialog();
+            ScritturaInFoglio(c);
+
+            FormMain main = new FormMain();
+            main.ShowDialog();
         }
 
         private void btnAccedi_Click(object sender, EventArgs e)
@@ -46,9 +48,13 @@ namespace SoftwarePrenotazioniCamere
             formAccesso.ShowDialog();   
         }
 
-        public void RegistrazioneFoglio()
+        public void ScritturaInFoglio(Cliente c)
         {
-                
+            SaveFileDialog listaClienti = new SaveFileDialog();
+            StreamWriter write = new StreamWriter(File.Create(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"));
+            write.WriteLine(c.ToString());
+            write.Close();
+            listaClienti.Dispose();
         }
     }
 }

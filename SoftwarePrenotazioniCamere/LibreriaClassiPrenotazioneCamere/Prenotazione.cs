@@ -19,5 +19,10 @@ namespace LibreriaClassiPrenotazioneCamere
             Cliente = c;
             Camera = cam;
         }
+
+        public override string ToString()
+        {
+            return Cliente.ToString() + " " +  Camera.Numero + " " + "Data";
+        }
     }
 }

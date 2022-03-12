@@ -25,10 +25,8 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnAccedi_Click(object sender, EventArgs e)
         {
-            //foreach (Cliente c in collection)
-            //{
+            OpenFileDialog listaClienti = new OpenFileDialog();
 
-            //}
             FormCatalogo formCatalogo = new FormCatalogo();
             formCatalogo.ShowDialog();
         }

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Data;
 using System.Text;
+using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
@@ -9,6 +10,49 @@ namespace SoftwarePrenotazioniCamere
         public FormMainDipendente()
         {
             InitializeComponent();
+        }
+
+        //istanzazione oggetto "albergoGirasole"
+        Albergo albergoGirasole = new Albergo();
+
+        private void btnVisualizzaPrenotazioni_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Prenotazioni;
+        }
+
+        private void btnVisualizzaClienti_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Clienti;
+        }
+
+        private void btnVisualizzaDisponibilitàCamere_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano1;
+            
+            btnPiano1.Enabled = true;
+            btnPiano2.Enabled = true;
+            btnPiano3.Enabled = true;
+        }
+
+        private void btnPiano1_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano1;
+        }
+
+        private void btnPiano2_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano2;
+        }
+
+        private void btnPiano3_Click(object sender, EventArgs e)
+        {
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano3;
         }
     }
 }

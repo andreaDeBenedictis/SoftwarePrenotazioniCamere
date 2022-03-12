@@ -41,6 +41,7 @@
             this.boxTelefono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAccedi = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label4
@@ -209,5 +210,6 @@
         private TextBox boxTelefono;
         private Label label6;
         private Button btnAccedi;
+        private SaveFileDialog saveFileDialog1;
     }
 }
