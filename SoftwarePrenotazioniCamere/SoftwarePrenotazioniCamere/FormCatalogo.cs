@@ -13,9 +13,13 @@ namespace SoftwarePrenotazioniCamere
 {
     public partial class FormCatalogo : Form
     {
+        Albergo albergoGirasole = new Albergo();
+        List<Camera> camere = new List<Camera>();
+
         public FormCatalogo()
         {
             InitializeComponent();
+            camere = albergoGirasole.RiempiListaCamere();
         }
 
         private void boxListaCamere_SelectedIndexChanged(object sender, EventArgs e)
@@ -23,24 +27,43 @@ namespace SoftwarePrenotazioniCamere
 
         }
 
-        Albergo albergoGirasole = new Albergo();
-
         private void btnPiano1_Click(object sender, EventArgs e)
         {
-            boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano1;
+            boxListaCamere.Items.Clear();
+            foreach (var c in camere)
+            {
+                if (c.Piano < 200) { boxListaCamere.Items.Add(c); }
+            }
         }
 
         private void btnPiano2_Click(object sender, EventArgs e)
         {
-            boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano2;
+            boxListaCamere.Items.Clear();
+            foreach (var c in camere)
+            {
+                if (c.Piano < 300 && c.Piano >= 200) boxListaCamere.DataSource = c.Piano;
+            }
         }
 
         private void btnPiano3_Click(object sender, EventArgs e)
         {
-            boxListaCamere.DataSource = null;
-            boxListaCamere.DataSource = albergoGirasole.Piano3;
+            boxListaCamere.Items.Clear();
+            foreach (var c in camere)
+            {
+                if (c.Piano >= 300) boxListaCamere.DataSource = c.Piano;
+            }
+        }
+
+        private void btnDettagli_Click(object sender, EventArgs e)
+        {
+            foreach(var c in camere)
+            {
+                if(c.ToString() == boxListaCamere.SelectedItem.ToString())
+                {
+                    FormDettagliCamera dettagliCamere = new FormDettagliCamera(c);
+                    dettagliCamere.ShowDialog();
+                }
+            }
         }
     }
 }

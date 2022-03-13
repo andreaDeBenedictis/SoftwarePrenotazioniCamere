@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
     public partial class FormDettagliCamera : Form
     {
-        public FormDettagliCamera()
+        public FormDettagliCamera(Camera camera)
         {
             InitializeComponent();
+            lblPiano.Text = camera.Piano.ToString();
+            lblNumero.Text = camera.Numero.ToString();
+        }
+
+        private void btnIndietro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
