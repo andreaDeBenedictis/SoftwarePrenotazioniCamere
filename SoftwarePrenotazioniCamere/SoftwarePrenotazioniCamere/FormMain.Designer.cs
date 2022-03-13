@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMainDipendente = new System.Windows.Forms.Button();
             this.btnRegistrati = new System.Windows.Forms.Button();
-            this.btnAccedi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCatalogo
@@ -85,27 +84,12 @@
             this.btnRegistrati.UseVisualStyleBackColor = false;
             this.btnRegistrati.Click += new System.EventHandler(this.btnRegistrati_Click);
             // 
-            // btnAccedi
-            // 
-            this.btnAccedi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAccedi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAccedi.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccedi.Location = new System.Drawing.Point(90, 12);
-            this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAccedi.Size = new System.Drawing.Size(99, 42);
-            this.btnAccedi.TabIndex = 4;
-            this.btnAccedi.Text = "Accedi";
-            this.btnAccedi.UseVisualStyleBackColor = false;
-            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(581, 420);
-            this.Controls.Add(this.btnAccedi);
             this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.btnMainDipendente);
             this.Controls.Add(this.label1);
@@ -122,6 +106,5 @@
         private Label label1;
         private Button btnMainDipendente;
         private Button btnRegistrati;
-        private Button btnAccedi;
     }
 }

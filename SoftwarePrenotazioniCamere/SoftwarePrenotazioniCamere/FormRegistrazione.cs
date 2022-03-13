@@ -18,18 +18,13 @@ namespace SoftwarePrenotazioniCamere
             InitializeComponent();
         }
 
-        private void FormRegistrazione_Load(object sender, EventArgs e)
-        {
-
-        }
-
         Albergo albergoGirasole = new Albergo();
         private void btnRegistrati_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente
                 ( boxNome.Text,
                   boxCognome.Text,
-                  boxCodiceFiscale.Text,
+                  boxPassword.Text,
                   boxEmail.Text,
                   int.Parse(boxTelefono.Text)
                 );
@@ -39,15 +34,8 @@ namespace SoftwarePrenotazioniCamere
             
             if (CheckRegistrazione(c))
             {
-                FormMain main = new FormMain();
-                main.ShowDialog();
+                this.Close();
             }
-        }
-
-        private void btnAccedi_Click(object sender, EventArgs e)
-        {
-            FormAccesso formAccesso = new FormAccesso();
-            formAccesso.ShowDialog();   
         }
 
         public bool CheckRegistrazione(Cliente c)
@@ -72,12 +60,17 @@ namespace SoftwarePrenotazioniCamere
                 lblError.Text = "Stai provando a registrarti con un profilo già registrato";
                 boxNome.Text = "";
                 boxCognome.Text = "";
-                boxCodiceFiscale.Text = "";
+                boxPassword.Text = "";
                 boxEmail.Text = "";
                 boxTelefono.Text = "";
             }
             
             return available;
+        }
+
+        private void btnIndietro_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

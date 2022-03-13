@@ -19,12 +19,6 @@ namespace SoftwarePrenotazioniCamere
             formAccesso.ShowDialog();
         }
 
-        private void btnAccedi_Click(object sender, EventArgs e)
-        {
-            FormAccesso formAccesso = new FormAccesso();
-            formAccesso.ShowDialog();
-        }
-
         private void btnRegistrati_Click(object sender, EventArgs e)
         {
             FormRegistrazione formRegistrazione = new FormRegistrazione();

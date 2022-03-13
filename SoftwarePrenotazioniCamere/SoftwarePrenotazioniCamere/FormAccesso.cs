@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
@@ -17,18 +18,28 @@ namespace SoftwarePrenotazioniCamere
             InitializeComponent();
         }
 
-        private void btnRegistrati_Click(object sender, EventArgs e)
-        {
-            FormRegistrazione formRegistrazione = new FormRegistrazione();
-            formRegistrazione.ShowDialog();
-        }
-
+        Albergo albergoGirasole = new Albergo();
         private void btnAccedi_Click(object sender, EventArgs e)
         {
-            OpenFileDialog listaClienti = new OpenFileDialog();
+            bool available = false;
 
-            FormCatalogo formCatalogo = new FormCatalogo();
-            formCatalogo.ShowDialog();
+            foreach (Cliente c in albergoGirasole.Clienti)
+            {
+                if (boxNome.Text == c.Nome && boxCognome.Text == c.Cognome && boxPassword.Text == c.Password)
+                {
+                    available = true;
+                }
+            }
+
+            if (available)
+            {
+                FormCatalogo formCatalogo = new FormCatalogo();
+                formCatalogo.ShowDialog();
+            }
+        }
+        private void btnIndietro_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

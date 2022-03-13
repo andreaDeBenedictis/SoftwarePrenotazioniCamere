@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.boxCodiceFiscale = new System.Windows.Forms.TextBox();
+            this.boxPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boxCognome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +39,7 @@
             this.boxEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.boxTelefono = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnAccedi = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnIndietro = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -51,17 +49,17 @@
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.Location = new System.Drawing.Point(29, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 22);
+            this.label4.Size = new System.Drawing.Size(82, 22);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Codice Fiscale";
+            this.label4.Text = "Password";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // boxCodiceFiscale
+            // boxPassword
             // 
-            this.boxCodiceFiscale.Location = new System.Drawing.Point(29, 170);
-            this.boxCodiceFiscale.Name = "boxCodiceFiscale";
-            this.boxCodiceFiscale.Size = new System.Drawing.Size(400, 23);
-            this.boxCodiceFiscale.TabIndex = 13;
+            this.boxPassword.Location = new System.Drawing.Point(29, 170);
+            this.boxPassword.Name = "boxPassword";
+            this.boxPassword.Size = new System.Drawing.Size(400, 23);
+            this.boxPassword.TabIndex = 13;
             // 
             // label3
             // 
@@ -96,7 +94,7 @@
             // 
             this.btnRegistrati.BackColor = System.Drawing.Color.White;
             this.btnRegistrati.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrati.Location = new System.Drawing.Point(74, 323);
+            this.btnRegistrati.Location = new System.Drawing.Point(74, 339);
             this.btnRegistrati.Name = "btnRegistrati";
             this.btnRegistrati.Size = new System.Drawing.Size(311, 50);
             this.btnRegistrati.TabIndex = 9;
@@ -147,34 +145,24 @@
             this.boxTelefono.Size = new System.Drawing.Size(400, 23);
             this.boxTelefono.TabIndex = 17;
             // 
-            // label6
+            // btnIndietro
             // 
-            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(456, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(311, 54);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Sei già registrato?";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAccedi
-            // 
-            this.btnAccedi.BackColor = System.Drawing.Color.White;
-            this.btnAccedi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccedi.Location = new System.Drawing.Point(456, 323);
-            this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.Size = new System.Drawing.Size(311, 50);
-            this.btnAccedi.TabIndex = 20;
-            this.btnAccedi.Text = "Accedi";
-            this.btnAccedi.UseVisualStyleBackColor = false;
-            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
+            this.btnIndietro.BackColor = System.Drawing.Color.White;
+            this.btnIndietro.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIndietro.Location = new System.Drawing.Point(348, 12);
+            this.btnIndietro.Name = "btnIndietro";
+            this.btnIndietro.Size = new System.Drawing.Size(81, 36);
+            this.btnIndietro.TabIndex = 20;
+            this.btnIndietro.Text = "Indietro";
+            this.btnIndietro.UseVisualStyleBackColor = false;
+            this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
             // 
             // lblError
             // 
-            this.lblError.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblError.Location = new System.Drawing.Point(456, 68);
+            this.lblError.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblError.Location = new System.Drawing.Point(74, 298);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(311, 125);
+            this.lblError.Size = new System.Drawing.Size(311, 38);
             this.lblError.TabIndex = 21;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -183,16 +171,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 419);
+            this.ClientSize = new System.Drawing.Size(459, 419);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnAccedi);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.boxTelefono);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boxEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.boxCodiceFiscale);
+            this.Controls.Add(this.boxPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.boxCognome);
             this.Controls.Add(this.label2);
@@ -200,7 +187,6 @@
             this.Controls.Add(this.boxNome);
             this.Name = "FormRegistrazione";
             this.Text = "FormRegistrazione";
-            this.Load += new System.EventHandler(this.FormRegistrazione_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +195,7 @@
         #endregion
 
         private Label label4;
-        private TextBox boxCodiceFiscale;
+        private TextBox boxPassword;
         private Label label3;
         private TextBox boxCognome;
         private Label label2;
@@ -219,9 +205,7 @@
         private TextBox boxEmail;
         private Label label5;
         private TextBox boxTelefono;
-        private Label label6;
-        private Button btnAccedi;
-        private SaveFileDialog saveFileDialog1;
+        private Button btnIndietro;
         private Label lblError;
     }
 }

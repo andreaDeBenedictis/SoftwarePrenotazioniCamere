@@ -19,6 +19,7 @@ namespace LibreriaClassiPrenotazioneCamere
         {
             Prenotazioni = new List<Prenotazione>();
             Clienti = new List<Cliente>();
+            IstanziaListaClienti(Clienti);
             Piano1 = new List<Camera>();
             Piano2 = new List<Camera>();
             Piano3 = new List<Camera>();
@@ -31,6 +32,16 @@ namespace LibreriaClassiPrenotazioneCamere
         public void AggiungiCliente(Cliente cliente)
         {
             Clienti.Add(cliente);
+        }
+
+        public void IstanziaListaClienti(List<Cliente> lista)
+        {
+            foreach (string line in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            {
+                string[] lines = line.Split(";");
+                Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], int.Parse(lines[4]));
+                lista.Add(c);
+            }
         }
 
         public void RiempiListaCamere()
