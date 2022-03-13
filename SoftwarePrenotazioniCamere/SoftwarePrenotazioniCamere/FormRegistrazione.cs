@@ -36,10 +36,12 @@ namespace SoftwarePrenotazioniCamere
 
             albergoGirasole.AggiungiCliente(c);
 
-            ScritturaInFoglio(c);
-
-            FormMain main = new FormMain();
-            main.ShowDialog();
+            
+            if (CheckRegistrazione(c))
+            {
+                FormMain main = new FormMain();
+                main.ShowDialog();
+            }
         }
 
         private void btnAccedi_Click(object sender, EventArgs e)
@@ -48,13 +50,34 @@ namespace SoftwarePrenotazioniCamere
             formAccesso.ShowDialog();   
         }
 
-        public void ScritturaInFoglio(Cliente c)
+        public bool CheckRegistrazione(Cliente c)
         {
-            SaveFileDialog listaClienti = new SaveFileDialog();
-            StreamWriter write = new StreamWriter(File.Create(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"));
-            write.WriteLine(c.ToString());
-            write.Close();
-            listaClienti.Dispose();
+            bool available = true;
+            foreach (string item in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            {
+                if (c.ToString() == item)
+                {
+                    available = false;
+                }
+            }
+
+            if (available)
+            {
+                StreamWriter sw = File.AppendText(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt");
+                sw.WriteLine(c.ToString());
+                sw.Close();
+            }
+            else
+            {
+                lblError.Text = "Stai provando a registrarti con un profilo già registrato";
+                boxNome.Text = "";
+                boxCognome.Text = "";
+                boxCodiceFiscale.Text = "";
+                boxEmail.Text = "";
+                boxTelefono.Text = "";
+            }
+            
+            return available;
         }
     }
 }

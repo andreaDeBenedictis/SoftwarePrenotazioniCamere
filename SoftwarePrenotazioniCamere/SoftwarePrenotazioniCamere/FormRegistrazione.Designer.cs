@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAccedi = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -149,7 +150,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(456, 113);
+            this.label6.Location = new System.Drawing.Point(456, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(311, 54);
             this.label6.TabIndex = 19;
@@ -160,7 +161,7 @@
             // 
             this.btnAccedi.BackColor = System.Drawing.Color.White;
             this.btnAccedi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccedi.Location = new System.Drawing.Point(456, 196);
+            this.btnAccedi.Location = new System.Drawing.Point(456, 323);
             this.btnAccedi.Name = "btnAccedi";
             this.btnAccedi.Size = new System.Drawing.Size(311, 50);
             this.btnAccedi.TabIndex = 20;
@@ -168,12 +169,22 @@
             this.btnAccedi.UseVisualStyleBackColor = false;
             this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
+            // lblError
+            // 
+            this.lblError.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblError.Location = new System.Drawing.Point(456, 68);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(311, 125);
+            this.lblError.TabIndex = 21;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormRegistrazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 419);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAccedi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -211,5 +222,6 @@
         private Label label6;
         private Button btnAccedi;
         private SaveFileDialog saveFileDialog1;
+        private Label lblError;
     }
 }
