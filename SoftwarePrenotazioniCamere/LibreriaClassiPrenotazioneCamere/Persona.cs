@@ -12,9 +12,9 @@ namespace LibreriaClassiPrenotazioneCamere
         public string Cognome { get; }
         public string Password { get; }
         public string Email { get; }
-        public int RecapitoTelefonico { get; }
+        public string RecapitoTelefonico { get; }
 
-        public Persona(string n, string c, string p, string email, int tel)
+        public Persona(string n, string c, string p, string email, string tel)
         {
             Nome = n;
             Cognome = c;
@@ -26,7 +26,7 @@ namespace LibreriaClassiPrenotazioneCamere
 
     public class Cliente : Persona
     {
-        public Cliente(string n, string c, string p, string email, int tel) : base(n, c, p, email, tel)
+        public Cliente(string n, string c, string p, string email, string tel) : base(n, c, p, email, tel)
         {
 
         }

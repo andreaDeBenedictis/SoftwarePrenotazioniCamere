@@ -29,10 +29,11 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public void IstanziaListaClienti(List<Cliente> lista)
         {
-            foreach (string line in File.ReadLines(/*@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"*/@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            foreach (string line in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
             {
                 string[] lines = line.Split(";");
-                Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], int.Parse(lines[4]));
+                Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], lines[4]);
                 lista.Add(c);
             }
         }

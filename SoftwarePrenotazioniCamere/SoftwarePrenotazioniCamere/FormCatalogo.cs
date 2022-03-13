@@ -54,11 +54,11 @@ namespace SoftwarePrenotazioniCamere
             }
         }
 
-        private void btnDettagli_Click(object sender, EventArgs e)
+        private void boxListaCamere_DoubleClick(object sender, EventArgs e)
         {
-            foreach(var c in camere)
+            foreach (var c in camere)
             {
-                if(c.ToString() == boxListaCamere.SelectedItem.ToString())
+                if (c.ToString() == boxListaCamere.SelectedItem.ToString())
                 {
                     FormDettagliCamera dettagliCamere = new FormDettagliCamera(c);
                     dettagliCamere.ShowDialog();
