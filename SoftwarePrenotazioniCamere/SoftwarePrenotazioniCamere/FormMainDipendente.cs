@@ -34,7 +34,7 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano < 200) { listBoxVisualizzaSelezioni.Items.Add(c); }
+                if (c.Piano == 1) { listBoxVisualizzaSelezioni.Items.Add(c); }
             }
 
             btnPiano1.Enabled = true;
@@ -47,7 +47,7 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano < 200) { listBoxVisualizzaSelezioni.Items.Add(c); }
+                if (c.Piano == 1) { listBoxVisualizzaSelezioni.Items.Add(c); }
             }
         }
 
@@ -56,7 +56,7 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano < 300 && c.Piano >= 200) listBoxVisualizzaSelezioni.DataSource = c.Piano;
+                if (c.Piano == 2) listBoxVisualizzaSelezioni.DataSource = c.Piano;
             }
         }
 
@@ -65,7 +65,7 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano >= 300) listBoxVisualizzaSelezioni.DataSource = c.Piano;
+                if (c.Piano == 3) listBoxVisualizzaSelezioni.DataSource = c.Piano;
             }
         }
     }

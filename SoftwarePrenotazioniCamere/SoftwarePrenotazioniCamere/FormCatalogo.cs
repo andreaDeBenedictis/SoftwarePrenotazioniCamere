@@ -32,7 +32,7 @@ namespace SoftwarePrenotazioniCamere
             boxListaCamere.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano < 200) { boxListaCamere.Items.Add(c); }
+                if (c.Piano == 1) { boxListaCamere.Items.Add(c); }
             }
         }
 
@@ -41,7 +41,7 @@ namespace SoftwarePrenotazioniCamere
             boxListaCamere.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano < 300 && c.Piano >= 200) boxListaCamere.DataSource = c.Piano;
+                if (c.Piano == 2) { boxListaCamere.Items.Add(c); }
             }
         }
 
@@ -50,7 +50,7 @@ namespace SoftwarePrenotazioniCamere
             boxListaCamere.Items.Clear();
             foreach (var c in camere)
             {
-                if (c.Piano >= 300) boxListaCamere.DataSource = c.Piano;
+                if (c.Piano == 3) { boxListaCamere.Items.Add(c); }
             }
         }
 
