@@ -3,6 +3,8 @@ Titolare -> Andrea De Benedictis
 
 Contributori -> Andrea De Benedictis - Samuele Arcangeli
 
+Diario di bordo -> https://docs.google.com/document/d/1xkJrRuF2zDQSBOlJ_RubuVXROAr69qdRau0wnJ8FLsw/edit?usp=sharing
+
 Diagramma di Gantt -> https://docs.google.com/spreadsheets/d/1Z77nHhZ8kUrcTdD8WWOezdMV4wD8zon0iHgYNs_IJHU/edit?usp=sharing
 
 Descrizione -> Software per la gestione delle prenotazioni delle camere di un albergo.
