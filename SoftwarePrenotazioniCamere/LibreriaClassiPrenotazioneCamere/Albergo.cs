@@ -13,6 +13,8 @@ namespace LibreriaClassiPrenotazioneCamere
         public List<Camera> Piano2 { get; }
         public List<Camera> Piano3 { get; }
 
+        public List<Servizio> Servizi { get; }
+
         public Albergo()
         {
             Prenotazioni = new List<Prenotazione>();
@@ -25,6 +27,10 @@ namespace LibreriaClassiPrenotazioneCamere
             Piano3 = new List<Camera>();
 
             RiempiListaCamere();
+
+            Servizi = new List<Servizio>();
+
+            RiempiListaServizi();
         }
         public void AggiungiPrenotazione(Prenotazione prenotazione)
         {
@@ -73,6 +79,13 @@ namespace LibreriaClassiPrenotazioneCamere
                     Piano3.Add(c3);
                 }
             }
+        }
+        public void RiempiListaServizi()
+        {
+            Servizi.Add(new Culla());
+            Servizi.Add(new MiniBar());
+            Servizi.Add(new Internet());
+            Servizi.Add(new ColazioneInCamera());
         }
     }
 }

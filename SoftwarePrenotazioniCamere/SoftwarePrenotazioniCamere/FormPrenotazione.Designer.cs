@@ -42,7 +42,7 @@
             this.Calendario = new System.Windows.Forms.MonthCalendar();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxServizi = new System.Windows.Forms.CheckedListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPrezzoPerNotte = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.listBoxPrezzi);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(1004, 12);
+            this.panel4.Location = new System.Drawing.Point(1038, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(341, 262);
             this.panel4.TabIndex = 15;
@@ -125,14 +125,14 @@
             this.panel3.Controls.Add(this.lblDataDa);
             this.panel3.Controls.Add(this.Calendario);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(538, 229);
+            this.panel3.Location = new System.Drawing.Point(538, 188);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(444, 528);
+            this.panel3.Size = new System.Drawing.Size(478, 568);
             this.panel3.TabIndex = 14;
             // 
             // lblErrore
             // 
-            this.lblErrore.Location = new System.Drawing.Point(63, 331);
+            this.lblErrore.Location = new System.Drawing.Point(63, 343);
             this.lblErrore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrore.Name = "lblErrore";
             this.lblErrore.Size = new System.Drawing.Size(324, 66);
@@ -141,7 +141,7 @@
             // 
             // btnSelA
             // 
-            this.btnSelA.Location = new System.Drawing.Point(256, 470);
+            this.btnSelA.Location = new System.Drawing.Point(256, 493);
             this.btnSelA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelA.Name = "btnSelA";
             this.btnSelA.Size = new System.Drawing.Size(166, 38);
@@ -152,7 +152,7 @@
             // 
             // btnSelDa
             // 
-            this.btnSelDa.Location = new System.Drawing.Point(14, 470);
+            this.btnSelDa.Location = new System.Drawing.Point(26, 493);
             this.btnSelDa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelDa.Name = "btnSelDa";
             this.btnSelDa.Size = new System.Drawing.Size(166, 38);
@@ -164,7 +164,7 @@
             // lblDataA
             // 
             this.lblDataA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDataA.Location = new System.Drawing.Point(256, 405);
+            this.lblDataA.Location = new System.Drawing.Point(257, 423);
             this.lblDataA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataA.Name = "lblDataA";
             this.lblDataA.Size = new System.Drawing.Size(165, 37);
@@ -175,7 +175,7 @@
             // lblDataDa
             // 
             this.lblDataDa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDataDa.Location = new System.Drawing.Point(14, 405);
+            this.lblDataDa.Location = new System.Drawing.Point(27, 423);
             this.lblDataDa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataDa.Name = "lblDataDa";
             this.lblDataDa.Size = new System.Drawing.Size(165, 37);
@@ -185,7 +185,7 @@
             // 
             // Calendario
             // 
-            this.Calendario.Location = new System.Drawing.Point(63, 70);
+            this.Calendario.Location = new System.Drawing.Point(68, 73);
             this.Calendario.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 15;
@@ -203,20 +203,20 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.checkedListBox1);
+            this.panel2.Controls.Add(this.checkedListBoxServizi);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(538, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(444, 197);
+            this.panel2.Size = new System.Drawing.Size(478, 154);
             this.panel2.TabIndex = 13;
             // 
-            // checkedListBox1
+            // checkedListBoxServizi
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(236, 25);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(180, 144);
-            this.checkedListBox1.TabIndex = 16;
+            this.checkedListBoxServizi.FormattingEnabled = true;
+            this.checkedListBoxServizi.Location = new System.Drawing.Point(224, 25);
+            this.checkedListBoxServizi.Name = "checkedListBoxServizi";
+            this.checkedListBoxServizi.Size = new System.Drawing.Size(241, 116);
+            this.checkedListBoxServizi.TabIndex = 16;
             // 
             // label9
             // 
@@ -281,7 +281,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(197, 408);
+            this.label5.Location = new System.Drawing.Point(197, 419);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 32);
             this.label5.TabIndex = 11;
@@ -289,7 +289,7 @@
             // lblDescrizione
             // 
             this.lblDescrizione.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDescrizione.Location = new System.Drawing.Point(181, 421);
+            this.lblDescrizione.Location = new System.Drawing.Point(181, 432);
             this.lblDescrizione.Name = "lblDescrizione";
             this.lblDescrizione.Size = new System.Drawing.Size(287, 304);
             this.lblDescrizione.TabIndex = 10;
@@ -299,7 +299,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(33, 421);
+            this.label8.Location = new System.Drawing.Point(33, 432);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 32);
             this.label8.TabIndex = 9;
@@ -365,7 +365,7 @@
             // btnIndietro
             // 
             this.btnIndietro.BackColor = System.Drawing.Color.White;
-            this.btnIndietro.Location = new System.Drawing.Point(1004, 380);
+            this.btnIndietro.Location = new System.Drawing.Point(1038, 384);
             this.btnIndietro.Name = "btnIndietro";
             this.btnIndietro.Size = new System.Drawing.Size(341, 60);
             this.btnIndietro.TabIndex = 10;
@@ -376,7 +376,7 @@
             // btnPrenota
             // 
             this.btnPrenota.BackColor = System.Drawing.Color.White;
-            this.btnPrenota.Location = new System.Drawing.Point(1004, 299);
+            this.btnPrenota.Location = new System.Drawing.Point(1038, 297);
             this.btnPrenota.Name = "btnPrenota";
             this.btnPrenota.Size = new System.Drawing.Size(341, 60);
             this.btnPrenota.TabIndex = 11;
@@ -388,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1365, 768);
+            this.ClientSize = new System.Drawing.Size(1402, 768);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -426,7 +426,7 @@
         private MonthCalendar Calendario;
         private Label label10;
         private Panel panel2;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox checkedListBoxServizi;
         private Label label9;
         private Panel panel1;
         private Label lblPrezzoPerNotte;

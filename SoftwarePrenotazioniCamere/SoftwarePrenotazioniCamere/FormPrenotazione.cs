@@ -13,6 +13,7 @@ namespace SoftwarePrenotazioniCamere
 {
     public partial class FormPrenotazione : Form
     {
+        Albergo albergoGirasole = new Albergo();
         Camera camera;
         
         public FormPrenotazione(Camera c)
@@ -29,6 +30,9 @@ namespace SoftwarePrenotazioniCamere
             else lblTipologia.Text = "Doppia";
             lblPrezzoPerNotte.Text = camera.Prezzo + "€";
             lblDescrizione.Text = camera.Descrizione.ToString();
+
+            checkedListBoxServizi.DataSource = null;
+            checkedListBoxServizi.DataSource = albergoGirasole.Servizi;
         }
 
         private void btnSelDa_Click_1(object sender, EventArgs e)
@@ -85,5 +89,6 @@ namespace SoftwarePrenotazioniCamere
         {
 
         }
+
     }
 }

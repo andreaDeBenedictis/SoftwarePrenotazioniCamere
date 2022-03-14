@@ -8,14 +8,51 @@ namespace LibreriaClassiPrenotazioneCamere
 {
     public class Servizio
     {
-        public int prezzo { get; set; }
+        public bool Attivazione { get; set; }
+        public string NomeServizio { get; protected set; }
+        public int Prezzo { get; protected set; }
         public Servizio()
         {
-            prezzo = CheckPrezzo();
+            NomeServizio = "";
+            Prezzo = 0;
         }
-        public int CheckPrezzo()
+        public override string ToString()
         {
-            return 0;
+            return NomeServizio + ": " + Prezzo + "€";
         }
     }
+    public class ColazioneInCamera : Servizio
+    {
+        public ColazioneInCamera() : base()
+        {
+            NomeServizio = "Colazione in camera";
+            Prezzo = 15;
+        }
+    }
+    public class MiniBar : Servizio
+    {
+        public MiniBar() : base()
+        {
+            NomeServizio = "Mini bar";
+            Prezzo = 15;
+        }
+    }
+    public class Internet : Servizio
+    {
+        public Internet() : base()
+        {
+            NomeServizio = "Internet";
+            Prezzo = 15;
+        }
+    }
+    public class Culla : Servizio
+    {
+        public Culla() : base()
+        {
+            NomeServizio = "Culla";
+            Prezzo = 15;
+        }
+    }
+
 }
+
