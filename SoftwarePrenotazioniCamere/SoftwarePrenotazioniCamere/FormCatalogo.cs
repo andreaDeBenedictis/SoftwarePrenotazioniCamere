@@ -14,12 +14,14 @@ namespace SoftwarePrenotazioniCamere
     public partial class FormCatalogo : Form
     {
         Albergo albergoGirasole = new Albergo();
+
         List<Camera> camere = new List<Camera>();
 
         public FormCatalogo()
         {
             InitializeComponent();
-            camere = albergoGirasole.RiempiListaCamere();
+            RiempimentoListaCamere();
+            boxListaCamere.Enabled = false;
         }
 
         private void boxListaCamere_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,41 +31,54 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPiano1_Click(object sender, EventArgs e)
         {
-            boxListaCamere.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 1) { boxListaCamere.Items.Add(c); }
-            }
+            boxListaCamere.Enabled = true;
+            boxListaCamere.DataSource = null;
+            boxListaCamere.DataSource = albergoGirasole.Piano1;
         }
 
         private void btnPiano2_Click(object sender, EventArgs e)
         {
-            boxListaCamere.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 2) { boxListaCamere.Items.Add(c); }
-            }
+            boxListaCamere.Enabled = true;
+            boxListaCamere.DataSource = null;
+            boxListaCamere.DataSource = albergoGirasole.Piano2;
         }
 
         private void btnPiano3_Click(object sender, EventArgs e)
         {
-            boxListaCamere.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 3) { boxListaCamere.Items.Add(c); }
-            }
+            boxListaCamere.Enabled = true;
+            boxListaCamere.DataSource = null;
+            boxListaCamere.DataSource = albergoGirasole.Piano3;
         }
 
         private void boxListaCamere_DoubleClick(object sender, EventArgs e)
         {
-            foreach (var c in camere)
-            {
-                if (c.ToString() == boxListaCamere.SelectedItem.ToString())
+                foreach (Camera c in camere)
                 {
-                    FormDettagliCamera dettagliCamere = new FormDettagliCamera(c);
-                    dettagliCamere.ShowDialog();
+                    if (c.ToString() == boxListaCamere.SelectedItem.ToString())
+                    {
+                        FormPrenotazione dettagliCamere = new FormPrenotazione(c);
+                        dettagliCamere.ShowDialog();
+                    }
                 }
+        }
+
+        private void RiempimentoListaCamere()
+        {
+            foreach (Camera c in albergoGirasole.Piano1)
+            {
+                camere.Add(c);
+            }
+
+            foreach (Camera c in albergoGirasole.Piano2)
+            {
+                camere.Add(c);
+            }
+
+            foreach (Camera c in albergoGirasole.Piano3)
+            {
+                camere.Add(c);
             }
         }
+
     }
 }

@@ -9,12 +9,10 @@ namespace SoftwarePrenotazioniCamere
     {
         //istanzazione oggetto "albergoGirasole"
         Albergo albergoGirasole = new Albergo();
-        List<Camera> camere = new List<Camera>();
 
         public FormMainDipendente()
         {
             InitializeComponent();
-            camere = albergoGirasole.RiempiListaCamere();
         }
 
         private void btnVisualizzaPrenotazioni_Click(object sender, EventArgs e)
@@ -31,11 +29,8 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnVisualizzaDisponibilitàCamere_Click(object sender, EventArgs e)
         {
-            listBoxVisualizzaSelezioni.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 1) { listBoxVisualizzaSelezioni.Items.Add(c); }
-            }
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano1;
 
             btnPiano1.Enabled = true;
             btnPiano2.Enabled = true;
@@ -44,29 +39,20 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPiano1_Click(object sender, EventArgs e)
         {
-            listBoxVisualizzaSelezioni.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 1) { listBoxVisualizzaSelezioni.Items.Add(c); }
-            }
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano1;
         }
 
         private void btnPiano2_Click(object sender, EventArgs e)
         {
-            listBoxVisualizzaSelezioni.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 2) listBoxVisualizzaSelezioni.DataSource = c.Piano;
-            }
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano2;
         }
 
         private void btnPiano3_Click(object sender, EventArgs e)
         {
-            listBoxVisualizzaSelezioni.Items.Clear();
-            foreach (var c in camere)
-            {
-                if (c.Piano == 3) listBoxVisualizzaSelezioni.DataSource = c.Piano;
-            }
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano3;
         }
     }
 }

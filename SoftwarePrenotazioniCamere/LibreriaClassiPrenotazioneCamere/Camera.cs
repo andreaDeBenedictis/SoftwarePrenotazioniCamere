@@ -12,13 +12,28 @@ namespace LibreriaClassiPrenotazioneCamere
         public int Piano { get; }
         public string Descrizione { get; }
         public bool Tipo { get; }
+        public int Prezzo { get; }
         public Camera(int n, bool t)
         {
             Numero = n;
             Tipo = t;
 
-            if (Tipo) Descrizione = "Camera " + Numero +  ". Singola, 1 letto, 1 bagno";
-            else Descrizione = "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
+            if (Tipo)
+            {
+                Descrizione = "Le nostre camere singole dispongono di un solo letto singolo e di un bagno." +
+                    "possiedono tutti i servizi principali come la presenza di un tv e del wi-fi gratuito.";
+                Prezzo = 50;
+            }
+            else 
+            {
+                Descrizione = "Le nostre camere doppie dispongono " +
+                    "di due letti singoli o di un letto matrimoniale. " +
+                    "Possiedono tutti i confort e i servizi necessari " +
+                    "affinché possiate godervi al massimo il vostro soggiorno";
+
+                Prezzo = 80;
+            }
+            
 
             Piano = 0;
             if (Numero >= 100 && Numero < 200) Piano = 1;
@@ -28,7 +43,14 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public override string ToString()
         {
-            return Descrizione;
+            if (Tipo)
+            {
+                return "Camera " + Numero + ". Singola, 1 letto, 1 bagno";
+            }
+            else
+            {
+                return "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
+            }
         }
 
 

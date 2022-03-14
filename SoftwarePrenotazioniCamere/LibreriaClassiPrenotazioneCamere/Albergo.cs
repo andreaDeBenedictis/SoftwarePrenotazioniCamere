@@ -9,14 +9,22 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public List<Prenotazione> Prenotazioni { get; }
         public List<Cliente> Clienti { get; }
-        public List<Camera> Camere { get; }
+        public List<Camera> Piano1 { get; }
+        public List<Camera> Piano2 { get; }
+        public List<Camera> Piano3 { get; }
 
         public Albergo()
         {
             Prenotazioni = new List<Prenotazione>();
             Clienti = new List<Cliente>();
+
             IstanziaListaClienti(Clienti);
-            Camere = new List<Camera>();
+
+            Piano1 = new List<Camera>();
+            Piano2 = new List<Camera>();
+            Piano3 = new List<Camera>();
+
+            RiempiListaCamere();
         }
         public void AggiungiPrenotazione(Prenotazione prenotazione)
         {
@@ -29,8 +37,8 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public void IstanziaListaClienti(List<Cliente> lista)
         {
-            foreach (string line in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
-            //foreach (string line in File.ReadLines(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            foreach (string line in File.ReadLines(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
             {
                 string[] lines = line.Split(";");
                 Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], lines[4]);
@@ -38,29 +46,33 @@ namespace LibreriaClassiPrenotazioneCamere
             }
         }
 
-        public List<Camera> RiempiListaCamere() //Riempimento lista camere
+        public void RiempiListaCamere() //Riempimento lista camere
         {
-            List<Camera> camere = new List<Camera>();
-
-            int k = 0;
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 11; i++)
             {
-                if (i <= 9) k = 100;
-                if (i > 9 && i <= 19) k = 200;
-                if (i > 19) k = 300;
-
-                if (i%2==0)
-                {                   
-                    Camera c1 = new Camera(k + i, true);
-                    camere.Add(c1);
-                }
-                else
+                if (i <= 5 && i != 0)
                 {
-                    Camera c2 = new Camera(k + i, false);
-                    camere.Add(c2);
-                }  
+                    Camera c1 = new Camera(100 + i, true);
+                    Piano1.Add(c1);
+
+                    Camera c2 = new Camera(200 + i, true);
+                    Piano2.Add(c2);
+
+                    Camera c3 = new Camera(300 + i, true);
+                    Piano3.Add(c3);
+                }
+                else if (i > 5 && i != 0)
+                {
+                    Camera c1 = new Camera(100 + i, false);
+                    Piano1.Add(c1);
+
+                    Camera c2 = new Camera(200 + i, false);
+                    Piano2.Add(c2);
+
+                    Camera c3 = new Camera(300 + i, false);
+                    Piano3.Add(c3);
+                }
             }
-            return camere;
         }
     }
 }

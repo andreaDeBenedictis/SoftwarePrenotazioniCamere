@@ -11,26 +11,27 @@ using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
-    public partial class FormDettagliCamera : Form
+    public partial class FormPrenotazione : Form
     {
-        public FormDettagliCamera(Camera camera)
+        Camera camera;
+        
+        public FormPrenotazione(Camera c)
         {
             InitializeComponent();
+            camera = c;
+        }
+
+        private void FormPrenotazione_Load(object sender, EventArgs e)
+        {
             lblPiano.Text = camera.Piano.ToString();
             lblNumero.Text = camera.Numero.ToString();
+            if (camera.Tipo) lblTipologia.Text = "Singola";
+            else lblTipologia.Text = "Doppia";
+            lblPrezzoPerNotte.Text = camera.Prezzo + "€";
+            lblDescrizione.Text = camera.Descrizione.ToString();
         }
 
-        private void btnIndietro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            
-        }
-
-        private void btnSelDa_Click(object sender, EventArgs e)
+        private void btnSelDa_Click_1(object sender, EventArgs e)
         {
             string[] data = Calendario.SelectionRange.Start.ToShortDateString().Split("/");
 
@@ -38,7 +39,7 @@ namespace SoftwarePrenotazioniCamere
             ControlloData();
         }
 
-        private void btnSelA_Click(object sender, EventArgs e)
+        private void btnSelA_Click_1(object sender, EventArgs e)
         {
             string[] data = Calendario.SelectionRange.Start.ToShortDateString().Split("/");
 
@@ -77,7 +78,12 @@ namespace SoftwarePrenotazioniCamere
             {
 
             }
-            
+
+        }
+
+        private void btnIndietro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
