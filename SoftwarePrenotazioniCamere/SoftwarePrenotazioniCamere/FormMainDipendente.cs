@@ -54,5 +54,22 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.DataSource = null;
             listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano3;
         }
+
+        private void comboCercaPer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerca_Click(object sender, EventArgs e)
+        {
+            foreach (string cerca in listBoxVisualizzaSelezioni.Items)
+            {
+                if (cerca == boxRicerca.Text)
+                {
+                    listBoxVisualizzaSelezioni.DataSource = null;
+                    listBoxVisualizzaSelezioni.Items.Add(cerca);
+                }
+            }
+        }
     }
 }

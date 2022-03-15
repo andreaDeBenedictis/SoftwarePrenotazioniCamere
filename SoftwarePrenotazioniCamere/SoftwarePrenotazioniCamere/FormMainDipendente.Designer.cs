@@ -34,30 +34,31 @@
             this.btnVisualizzaDisponibilitàCamere = new System.Windows.Forms.Button();
             this.boxRicerca = new System.Windows.Forms.TextBox();
             this.comboCercaPer = new System.Windows.Forms.ComboBox();
-            this.checkedListOrdina = new System.Windows.Forms.CheckedListBox();
-            this.lblOrdina = new System.Windows.Forms.Label();
             this.btnPiano1 = new System.Windows.Forms.Button();
             this.btnPiano2 = new System.Windows.Forms.Button();
             this.btnPiano3 = new System.Windows.Forms.Button();
+            this.btnCerca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxVisualizzaSelezioni
             // 
             this.listBoxVisualizzaSelezioni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxVisualizzaSelezioni.FormattingEnabled = true;
-            this.listBoxVisualizzaSelezioni.ItemHeight = 21;
-            this.listBoxVisualizzaSelezioni.Location = new System.Drawing.Point(12, 175);
+            this.listBoxVisualizzaSelezioni.ItemHeight = 28;
+            this.listBoxVisualizzaSelezioni.Location = new System.Drawing.Point(14, 233);
+            this.listBoxVisualizzaSelezioni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxVisualizzaSelezioni.Name = "listBoxVisualizzaSelezioni";
-            this.listBoxVisualizzaSelezioni.Size = new System.Drawing.Size(743, 382);
+            this.listBoxVisualizzaSelezioni.Size = new System.Drawing.Size(849, 508);
             this.listBoxVisualizzaSelezioni.TabIndex = 0;
             // 
             // btnVisualizzaPrenotazioni
             // 
             this.btnVisualizzaPrenotazioni.BackColor = System.Drawing.Color.White;
             this.btnVisualizzaPrenotazioni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVisualizzaPrenotazioni.Location = new System.Drawing.Point(13, 12);
+            this.btnVisualizzaPrenotazioni.Location = new System.Drawing.Point(15, 16);
+            this.btnVisualizzaPrenotazioni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVisualizzaPrenotazioni.Name = "btnVisualizzaPrenotazioni";
-            this.btnVisualizzaPrenotazioni.Size = new System.Drawing.Size(186, 73);
+            this.btnVisualizzaPrenotazioni.Size = new System.Drawing.Size(366, 97);
             this.btnVisualizzaPrenotazioni.TabIndex = 1;
             this.btnVisualizzaPrenotazioni.Text = "Visualizza Prenotazioni";
             this.btnVisualizzaPrenotazioni.UseVisualStyleBackColor = false;
@@ -67,9 +68,10 @@
             // 
             this.btnVisualizzaClienti.BackColor = System.Drawing.Color.White;
             this.btnVisualizzaClienti.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVisualizzaClienti.Location = new System.Drawing.Point(205, 12);
+            this.btnVisualizzaClienti.Location = new System.Drawing.Point(387, 16);
+            this.btnVisualizzaClienti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVisualizzaClienti.Name = "btnVisualizzaClienti";
-            this.btnVisualizzaClienti.Size = new System.Drawing.Size(154, 73);
+            this.btnVisualizzaClienti.Size = new System.Drawing.Size(366, 97);
             this.btnVisualizzaClienti.TabIndex = 2;
             this.btnVisualizzaClienti.Text = "Visualizza Clienti";
             this.btnVisualizzaClienti.UseVisualStyleBackColor = false;
@@ -79,9 +81,10 @@
             // 
             this.btnVisualizzaDisponibilitàCamere.BackColor = System.Drawing.Color.White;
             this.btnVisualizzaDisponibilitàCamere.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVisualizzaDisponibilitàCamere.Location = new System.Drawing.Point(365, 12);
+            this.btnVisualizzaDisponibilitàCamere.Location = new System.Drawing.Point(759, 16);
+            this.btnVisualizzaDisponibilitàCamere.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVisualizzaDisponibilitàCamere.Name = "btnVisualizzaDisponibilitàCamere";
-            this.btnVisualizzaDisponibilitàCamere.Size = new System.Drawing.Size(239, 73);
+            this.btnVisualizzaDisponibilitàCamere.Size = new System.Drawing.Size(366, 97);
             this.btnVisualizzaDisponibilitàCamere.TabIndex = 7;
             this.btnVisualizzaDisponibilitàCamere.Text = "Visualizza disponibilità camere";
             this.btnVisualizzaDisponibilitàCamere.UseVisualStyleBackColor = false;
@@ -90,49 +93,34 @@
             // boxRicerca
             // 
             this.boxRicerca.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boxRicerca.Location = new System.Drawing.Point(339, 109);
+            this.boxRicerca.Location = new System.Drawing.Point(387, 149);
+            this.boxRicerca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxRicerca.Multiline = true;
             this.boxRicerca.Name = "boxRicerca";
-            this.boxRicerca.Size = new System.Drawing.Size(416, 33);
+            this.boxRicerca.Size = new System.Drawing.Size(476, 43);
             this.boxRicerca.TabIndex = 9;
             // 
             // comboCercaPer
             // 
             this.comboCercaPer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboCercaPer.FormattingEnabled = true;
-            this.comboCercaPer.Location = new System.Drawing.Point(12, 109);
+            this.comboCercaPer.Location = new System.Drawing.Point(15, 149);
+            this.comboCercaPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboCercaPer.Name = "comboCercaPer";
-            this.comboCercaPer.Size = new System.Drawing.Size(321, 33);
+            this.comboCercaPer.Size = new System.Drawing.Size(366, 39);
             this.comboCercaPer.TabIndex = 10;
-            // 
-            // checkedListOrdina
-            // 
-            this.checkedListOrdina.FormattingEnabled = true;
-            this.checkedListOrdina.Location = new System.Drawing.Point(761, 12);
-            this.checkedListOrdina.Name = "checkedListOrdina";
-            this.checkedListOrdina.Size = new System.Drawing.Size(293, 130);
-            this.checkedListOrdina.TabIndex = 11;
-            // 
-            // lblOrdina
-            // 
-            this.lblOrdina.BackColor = System.Drawing.Color.White;
-            this.lblOrdina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOrdina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblOrdina.Location = new System.Drawing.Point(610, 12);
-            this.lblOrdina.Name = "lblOrdina";
-            this.lblOrdina.Size = new System.Drawing.Size(145, 73);
-            this.lblOrdina.TabIndex = 12;
-            this.lblOrdina.Text = "Ordina per:";
-            this.lblOrdina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comboCercaPer.Text = "Ricerca per:";
+            this.comboCercaPer.SelectedIndexChanged += new System.EventHandler(this.comboCercaPer_SelectedIndexChanged);
             // 
             // btnPiano1
             // 
             this.btnPiano1.BackColor = System.Drawing.Color.White;
             this.btnPiano1.Enabled = false;
             this.btnPiano1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPiano1.Location = new System.Drawing.Point(761, 175);
+            this.btnPiano1.Location = new System.Drawing.Point(870, 233);
+            this.btnPiano1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPiano1.Name = "btnPiano1";
-            this.btnPiano1.Size = new System.Drawing.Size(293, 73);
+            this.btnPiano1.Size = new System.Drawing.Size(255, 97);
             this.btnPiano1.TabIndex = 13;
             this.btnPiano1.Text = "Piano 1";
             this.btnPiano1.UseVisualStyleBackColor = false;
@@ -143,9 +131,10 @@
             this.btnPiano2.BackColor = System.Drawing.Color.White;
             this.btnPiano2.Enabled = false;
             this.btnPiano2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPiano2.Location = new System.Drawing.Point(761, 325);
+            this.btnPiano2.Location = new System.Drawing.Point(870, 433);
+            this.btnPiano2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPiano2.Name = "btnPiano2";
-            this.btnPiano2.Size = new System.Drawing.Size(293, 73);
+            this.btnPiano2.Size = new System.Drawing.Size(255, 97);
             this.btnPiano2.TabIndex = 14;
             this.btnPiano2.Text = "Piano 2";
             this.btnPiano2.UseVisualStyleBackColor = false;
@@ -156,32 +145,46 @@
             this.btnPiano3.BackColor = System.Drawing.Color.White;
             this.btnPiano3.Enabled = false;
             this.btnPiano3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPiano3.Location = new System.Drawing.Point(761, 484);
+            this.btnPiano3.Location = new System.Drawing.Point(870, 645);
+            this.btnPiano3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPiano3.Name = "btnPiano3";
-            this.btnPiano3.Size = new System.Drawing.Size(293, 73);
+            this.btnPiano3.Size = new System.Drawing.Size(255, 97);
             this.btnPiano3.TabIndex = 15;
             this.btnPiano3.Text = "Piano 3";
             this.btnPiano3.UseVisualStyleBackColor = false;
             this.btnPiano3.Click += new System.EventHandler(this.btnPiano3_Click);
             // 
+            // btnCerca
+            // 
+            this.btnCerca.BackColor = System.Drawing.Color.White;
+            this.btnCerca.Enabled = false;
+            this.btnCerca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCerca.Location = new System.Drawing.Point(870, 149);
+            this.btnCerca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerca.Name = "btnCerca";
+            this.btnCerca.Size = new System.Drawing.Size(255, 43);
+            this.btnCerca.TabIndex = 16;
+            this.btnCerca.Text = "Cerca";
+            this.btnCerca.UseVisualStyleBackColor = false;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
+            // 
             // FormMainDipendente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1066, 570);
+            this.ClientSize = new System.Drawing.Size(1136, 760);
+            this.Controls.Add(this.btnCerca);
             this.Controls.Add(this.btnPiano3);
             this.Controls.Add(this.btnPiano2);
             this.Controls.Add(this.btnPiano1);
-            this.Controls.Add(this.lblOrdina);
-            this.Controls.Add(this.checkedListOrdina);
             this.Controls.Add(this.comboCercaPer);
             this.Controls.Add(this.boxRicerca);
             this.Controls.Add(this.btnVisualizzaDisponibilitàCamere);
             this.Controls.Add(this.btnVisualizzaClienti);
             this.Controls.Add(this.btnVisualizzaPrenotazioni);
             this.Controls.Add(this.listBoxVisualizzaSelezioni);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormMainDipendente";
             this.Text = "FormMainDipendente";
             this.ResumeLayout(false);
@@ -197,10 +200,9 @@
         private Button btnVisualizzaDisponibilitàCamere;
         private TextBox boxRicerca;
         private ComboBox comboCercaPer;
-        private CheckedListBox checkedListOrdina;
-        private Label lblOrdina;
         private Button btnPiano1;
         private Button btnPiano2;
         private Button btnPiano3;
+        private Button btnCerca;
     }
 }

@@ -41,8 +41,7 @@ namespace SoftwarePrenotazioniCamere
         public bool CheckRegistrazione(Cliente c)
         {
             bool available = true;
-            //foreach (string item in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
-            foreach (string item in File.ReadLines(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            foreach (string item in File.ReadLines(albergoGirasole.GetPathClienti()))
             {
                 if (c.ToString() == item)
                 {
@@ -52,8 +51,7 @@ namespace SoftwarePrenotazioniCamere
 
             if (available)
             {
-                //StreamWriter sw = File.AppendText(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt");
-                StreamWriter sw = File.AppendText(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt");
+                StreamWriter sw = File.AppendText(albergoGirasole.GetPathClienti());
                 sw.WriteLine(c.ToString());
                 sw.Close();
             }

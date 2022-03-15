@@ -1,3 +1,5 @@
+using LibreriaClassiPrenotazioneCamere;
+
 namespace SoftwarePrenotazioniCamere
 {
     public partial class FormMain : Form

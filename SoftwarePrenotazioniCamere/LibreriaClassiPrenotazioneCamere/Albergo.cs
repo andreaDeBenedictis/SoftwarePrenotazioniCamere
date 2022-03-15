@@ -43,8 +43,7 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public void IstanziaListaClienti(List<Cliente> lista)
         {
-            //foreach (string line in File.ReadLines(@"C:\Users\deben\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
-            foreach (string line in File.ReadLines(@"C:\Users\Acer\OneDrive\Documenti\GitHub\SoftwarePrenotazioniCamere\listaClienti.txt"))
+            foreach (string line in File.ReadLines(GetPathClienti()))
             {
                 string[] lines = line.Split(";");
                 Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], lines[4]);
@@ -80,6 +79,20 @@ namespace LibreriaClassiPrenotazioneCamere
                 }
             }
         }
+        public string GetPathClienti()
+        {
+            string pathDirectory = Directory.GetCurrentDirectory();
+            string[] subPaths = pathDirectory.Split("\\");
+            string path = "";
+
+            for (int i = 0; i < subPaths.Length - 5; i++)
+            {
+                path += $"{subPaths[i]}\\";
+            }
+
+            return path + "listaClienti.txt";
+        }
+
         public void RiempiListaServizi()
         {
             Servizi.Add(new Culla());
