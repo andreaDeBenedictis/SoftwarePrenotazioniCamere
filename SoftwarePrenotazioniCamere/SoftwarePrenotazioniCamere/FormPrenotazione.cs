@@ -32,7 +32,7 @@ namespace SoftwarePrenotazioniCamere
             lblDescrizione.Text = camera.Descrizione.ToString();
 
             checkedListBoxServizi.DataSource = null;
-            checkedListBoxServizi.DataSource = albergoGirasole.Servizi;
+            checkedListBoxServizi.DataSource = camera.Servizi;
         }
 
         private void btnSelDa_Click_1(object sender, EventArgs e)
@@ -90,5 +90,22 @@ namespace SoftwarePrenotazioniCamere
 
         }
 
+        private void checkedListBoxServizi_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            foreach(Servizio s in camera.Servizi)
+            {
+                if(checkedListBoxServizi.SelectedItem.ToString() == s.ToString())
+                {
+                    listBoxPrezzi.Items.Add($"{s.NomeServizio}: + {s.Prezzo}€");
+                }
+                for(int i = 0; i < listBoxPrezzi.Items.Count; i++)
+                {
+                    if(listBoxPrezzi.Items.Contains(i).ToString() == $"{s.NomeServizio}: + {s.Prezzo}€")
+                    {
+                        listBoxPrezzi.Items.Remove(i);
+                    }
+                }
+            }
+        }
     }
 }

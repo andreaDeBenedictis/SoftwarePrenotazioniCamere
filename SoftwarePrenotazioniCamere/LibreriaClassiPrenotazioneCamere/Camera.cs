@@ -13,6 +13,7 @@ namespace LibreriaClassiPrenotazioneCamere
         public string Descrizione { get; }
         public bool Tipo { get; }
         public int Prezzo { get; }
+        public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
             Numero = n;
@@ -39,6 +40,9 @@ namespace LibreriaClassiPrenotazioneCamere
             if (Numero >= 100 && Numero < 200) Piano = 1;
             if (Numero >= 200 && Numero < 300) Piano = 2;
             if (Numero >= 300) Piano = 3;
+
+            Servizi = new List<Servizio>();
+            RiempiListaServizi();
         }
 
         public override string ToString()
@@ -53,6 +57,12 @@ namespace LibreriaClassiPrenotazioneCamere
             }
         }
 
-
+        public void RiempiListaServizi()
+        {
+            Servizi.Add(new Culla());
+            Servizi.Add(new MiniBar());
+            Servizi.Add(new Internet());
+            Servizi.Add(new ColazioneInCamera());
+        }
     }
 }
