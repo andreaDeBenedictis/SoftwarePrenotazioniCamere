@@ -34,6 +34,8 @@
             this.lblErrore = new System.Windows.Forms.Label();
             this.btnInvia = new System.Windows.Forms.Button();
             this.boxPassword = new System.Windows.Forms.TextBox();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnHidden = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPassword
@@ -89,18 +91,46 @@
             // 
             // boxPassword
             // 
+            this.boxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.boxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.boxPassword.Location = new System.Drawing.Point(62, 111);
             this.boxPassword.Name = "boxPassword";
+            this.boxPassword.PasswordChar = '*';
             this.boxPassword.Size = new System.Drawing.Size(237, 29);
             this.boxPassword.TabIndex = 6;
+            // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.White;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Image = global::SoftwarePrenotazioniCamere.Properties.Resources.eye_icon;
+            this.btnShow.Location = new System.Drawing.Point(259, 111);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(40, 29);
+            this.btnShow.TabIndex = 7;
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.White;
+            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidden.Image = global::SoftwarePrenotazioniCamere.Properties.Resources.hidden_eye_icon1;
+            this.btnHidden.Location = new System.Drawing.Point(259, 111);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(40, 29);
+            this.btnHidden.TabIndex = 8;
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
             // 
             // FormLoginDipendente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(370, 250);
+            this.Controls.Add(this.btnHidden);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.boxPassword);
             this.Controls.Add(this.btnInvia);
             this.Controls.Add(this.lblErrore);
@@ -122,5 +152,7 @@
         private Label lblErrore;
         private Button btnInvia;
         private TextBox boxPassword;
+        private Button btnShow;
+        private Button btnHidden;
     }
 }

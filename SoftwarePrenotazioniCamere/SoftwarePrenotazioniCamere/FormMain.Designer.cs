@@ -37,12 +37,11 @@
             // btnCatalogo
             // 
             this.btnCatalogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCatalogo.BackColor = System.Drawing.Color.BurlyWood;
             this.btnCatalogo.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCatalogo.Location = new System.Drawing.Point(103, 277);
-            this.btnCatalogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCatalogo.Location = new System.Drawing.Point(90, 232);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(457, 76);
+            this.btnCatalogo.Size = new System.Drawing.Size(400, 57);
             this.btnCatalogo.TabIndex = 0;
             this.btnCatalogo.Text = "Catalogo camere disponibili";
             this.btnCatalogo.UseVisualStyleBackColor = false;
@@ -51,9 +50,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(103, 97);
+            this.label1.Location = new System.Drawing.Point(90, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(457, 124);
+            this.label1.Size = new System.Drawing.Size(400, 93);
             this.label1.TabIndex = 1;
             this.label1.Text = "Albergo Girasole";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,12 +60,11 @@
             // btnMainDipendente
             // 
             this.btnMainDipendente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMainDipendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMainDipendente.BackColor = System.Drawing.Color.BurlyWood;
             this.btnMainDipendente.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMainDipendente.Location = new System.Drawing.Point(103, 411);
-            this.btnMainDipendente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMainDipendente.Location = new System.Drawing.Point(90, 357);
             this.btnMainDipendente.Name = "btnMainDipendente";
-            this.btnMainDipendente.Size = new System.Drawing.Size(457, 76);
+            this.btnMainDipendente.Size = new System.Drawing.Size(400, 57);
             this.btnMainDipendente.TabIndex = 2;
             this.btnMainDipendente.Text = "Accedi da dipendente";
             this.btnMainDipendente.UseVisualStyleBackColor = false;
@@ -75,13 +73,12 @@
             // btnRegistrati
             // 
             this.btnRegistrati.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRegistrati.BackColor = System.Drawing.Color.BurlyWood;
             this.btnRegistrati.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrati.Location = new System.Drawing.Point(447, 16);
-            this.btnRegistrati.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegistrati.Location = new System.Drawing.Point(391, 36);
             this.btnRegistrati.Name = "btnRegistrati";
             this.btnRegistrati.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnRegistrati.Size = new System.Drawing.Size(113, 56);
+            this.btnRegistrati.Size = new System.Drawing.Size(99, 42);
             this.btnRegistrati.TabIndex = 3;
             this.btnRegistrati.Text = "Registrati";
             this.btnRegistrati.UseVisualStyleBackColor = false;
@@ -89,15 +86,14 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(664, 560);
+            this.ClientSize = new System.Drawing.Size(581, 469);
             this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.btnMainDipendente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCatalogo);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
             this.Text = "Main";
             this.ResumeLayout(false);

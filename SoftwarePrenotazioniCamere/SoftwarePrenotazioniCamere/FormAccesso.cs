@@ -25,7 +25,7 @@ namespace SoftwarePrenotazioniCamere
 
             foreach (Cliente c in albergoGirasole.Clienti)
             {
-                if (boxNome.Text == c.Nome && boxCognome.Text == c.Cognome && boxPassword.Text == c.Password)
+                if (boxEmail.Text == c.Email && boxPassword.Text == c.Password)
                 {
                     available = true;
                 }
