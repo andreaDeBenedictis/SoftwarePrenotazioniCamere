@@ -115,7 +115,7 @@
             // 
             this.btnHidden.BackColor = System.Drawing.Color.White;
             this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHidden.Image = global::SoftwarePrenotazioniCamere.Properties.Resources.hidden_eye_icon1;
+            this.btnHidden.Image = global::SoftwarePrenotazioniCamere.Properties.Resources.hidden_eye_icon;
             this.btnHidden.Location = new System.Drawing.Point(259, 111);
             this.btnHidden.Name = "btnHidden";
             this.btnHidden.Size = new System.Drawing.Size(40, 29);

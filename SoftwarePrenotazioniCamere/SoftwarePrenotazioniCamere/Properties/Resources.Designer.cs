@@ -79,15 +79,5 @@ namespace SoftwarePrenotazioniCamere.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hidden_eye_icon1 {
-            get {
-                object obj = ResourceManager.GetObject("hidden eye icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
