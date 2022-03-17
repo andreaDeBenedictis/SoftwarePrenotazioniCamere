@@ -59,14 +59,16 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnCerca_Click(object sender, EventArgs e)
         {
-            foreach (string cerca in listBoxVisualizzaSelezioni.Items)
+            List<Cliente> listaRicerca = new List<Cliente>();
+            foreach (Cliente c in listBoxVisualizzaSelezioni.Items)
             {
-                if (cerca == boxRicerca.Text)
+                if (c.ToString() == boxRicerca.Text)
                 {
-                    listBoxVisualizzaSelezioni.DataSource = null;
-                    listBoxVisualizzaSelezioni.Items.Add(cerca);
+                    listaRicerca.Add(c);
                 }
             }
+            listBoxVisualizzaSelezioni.DataSource = null;
+            listBoxVisualizzaSelezioni.DataSource = listaRicerca;
         }
     }
 }
