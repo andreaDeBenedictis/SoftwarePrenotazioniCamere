@@ -12,6 +12,9 @@
         public Albergo()
         {
             Prenotazioni = new List<Prenotazione>();
+
+            IstanziaListaPrenotazioni(Prenotazioni);
+
             Clienti = new List<Cliente>();
 
             IstanziaListaClienti(Clienti);
@@ -38,6 +41,30 @@
                 string[] lines = line.Split(";");
                 Cliente c = new Cliente(lines[0], lines[1], lines[2], lines[3], lines[4]);
                 lista.Add(c);
+            }
+        }
+
+        public void IstanziaListaPrenotazioni(List<Prenotazione> lista)
+        {
+            foreach (string line in File.ReadLines(GetPathPrenotazioni()))
+            {
+                bool tipo = true;
+                string[] lines = line.Split(";");
+
+                Cliente cliente = new Cliente(lines[0], lines[1], lines[2], lines[3], lines[4]);
+
+                if (lines[6] == "True") tipo = true;
+                else tipo = false;
+
+                Camera camera = new Camera(int.Parse(lines[5]), tipo);
+
+                DateTime inizio = new DateTime(int.Parse(lines[9]), int.Parse(lines[8]), int.Parse(lines[7]));
+
+                DateTime fine = new DateTime(int.Parse(lines[12]), int.Parse(lines[11]), int.Parse(lines[10]));
+
+                Prenotazione prenotazione = new Prenotazione(cliente, camera, inizio, fine);
+
+                lista.Add(prenotazione);
             }
         }
 
@@ -81,6 +108,25 @@
             }
 
             return path + "listaClienti.txt";
+        }
+
+        public string GetPathPrenotazioni()
+        {
+            string pathDirectory = Directory.GetCurrentDirectory();
+            string[] subPaths = pathDirectory.Split("\\");
+            string path = "";
+
+            for (int i = 0; i < subPaths.Length - 5; i++)
+            {
+                path += $"{subPaths[i]}\\";
+            }
+
+            return path + "listaPrenotazioni.txt";
+        }
+
+        public void ControlloDateDisponibili()
+        {
+
         }
     }
 }

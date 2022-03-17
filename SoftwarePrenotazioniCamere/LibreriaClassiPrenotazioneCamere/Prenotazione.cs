@@ -7,7 +7,6 @@
         public DateTime DataInizio { get; set; }
         public DateTime DataFine { get; set; }
 
-
         public Prenotazione(Cliente c, Camera cam, DateTime dataInizio, DateTime dataFine)
         {
             Cliente = c;
@@ -18,7 +17,7 @@
 
         public override string ToString()
         {
-            return Cliente.ToString() + " " + Camera.Numero + " " + "Data";
+            return Cliente.ToString() + Camera.Numero + ";" + Camera.Tipo + ";" + DataInizio.Day + ";" + DataInizio.Month + ";" + DataInizio.Year + ";" + DataFine.Day + ";" + DataFine.Month + ";" + DataFine.Year + ";";
         }
     }
 }

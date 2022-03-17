@@ -35,11 +35,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblErrore = new System.Windows.Forms.Label();
-            this.btnSelA = new System.Windows.Forms.Button();
-            this.btnSelDa = new System.Windows.Forms.Button();
-            this.lblDataA = new System.Windows.Forms.Label();
-            this.lblDataDa = new System.Windows.Forms.Label();
-            this.Calendario = new System.Windows.Forms.MonthCalendar();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkedListBoxServizi = new System.Windows.Forms.CheckedListBox();
@@ -60,6 +55,10 @@
             this.btnIndietro = new System.Windows.Forms.Button();
             this.btnPrenota = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dataPickerDa = new System.Windows.Forms.DateTimePicker();
+            this.dataPickerA = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,12 +124,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.dataPickerA);
+            this.panel3.Controls.Add(this.dataPickerDa);
             this.panel3.Controls.Add(this.lblErrore);
-            this.panel3.Controls.Add(this.btnSelA);
-            this.panel3.Controls.Add(this.btnSelDa);
-            this.panel3.Controls.Add(this.lblDataA);
-            this.panel3.Controls.Add(this.lblDataDa);
-            this.panel3.Controls.Add(this.Calendario);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(377, 113);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -142,56 +140,9 @@
             // 
             this.lblErrore.Location = new System.Drawing.Point(60, 239);
             this.lblErrore.Name = "lblErrore";
-            this.lblErrore.Size = new System.Drawing.Size(227, 40);
+            this.lblErrore.Size = new System.Drawing.Size(227, 113);
             this.lblErrore.TabIndex = 21;
             this.lblErrore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSelA
-            // 
-            this.btnSelA.Location = new System.Drawing.Point(206, 324);
-            this.btnSelA.Name = "btnSelA";
-            this.btnSelA.Size = new System.Drawing.Size(116, 23);
-            this.btnSelA.TabIndex = 20;
-            this.btnSelA.Text = "Seleziona";
-            this.btnSelA.UseVisualStyleBackColor = true;
-            this.btnSelA.Click += new System.EventHandler(this.btnSelA_Click_1);
-            // 
-            // btnSelDa
-            // 
-            this.btnSelDa.Location = new System.Drawing.Point(41, 324);
-            this.btnSelDa.Name = "btnSelDa";
-            this.btnSelDa.Size = new System.Drawing.Size(116, 23);
-            this.btnSelDa.TabIndex = 19;
-            this.btnSelDa.Text = "Seleziona";
-            this.btnSelDa.UseVisualStyleBackColor = true;
-            this.btnSelDa.Click += new System.EventHandler(this.btnSelDa_Click_1);
-            // 
-            // lblDataA
-            // 
-            this.lblDataA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDataA.Location = new System.Drawing.Point(206, 289);
-            this.lblDataA.Name = "lblDataA";
-            this.lblDataA.Size = new System.Drawing.Size(116, 23);
-            this.lblDataA.TabIndex = 18;
-            this.lblDataA.Text = "A";
-            this.lblDataA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDataDa
-            // 
-            this.lblDataDa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDataDa.Location = new System.Drawing.Point(41, 289);
-            this.lblDataDa.Name = "lblDataDa";
-            this.lblDataDa.Size = new System.Drawing.Size(116, 23);
-            this.lblDataDa.TabIndex = 16;
-            this.lblDataDa.Text = "Da";
-            this.lblDataDa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Calendario
-            // 
-            this.Calendario.Location = new System.Drawing.Point(60, 61);
-            this.Calendario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Calendario.Name = "Calendario";
-            this.Calendario.TabIndex = 15;
             // 
             // label10
             // 
@@ -415,6 +366,42 @@
             this.panel5.Size = new System.Drawing.Size(349, 214);
             this.panel5.TabIndex = 16;
             // 
+            // dataPickerDa
+            // 
+            this.dataPickerDa.Location = new System.Drawing.Point(28, 100);
+            this.dataPickerDa.Name = "dataPickerDa";
+            this.dataPickerDa.Size = new System.Drawing.Size(306, 23);
+            this.dataPickerDa.TabIndex = 22;
+            this.dataPickerDa.ValueChanged += new System.EventHandler(this.dataPickerDa_ValueChanged);
+            // 
+            // dataPickerA
+            // 
+            this.dataPickerA.Location = new System.Drawing.Point(28, 180);
+            this.dataPickerA.Name = "dataPickerA";
+            this.dataPickerA.Size = new System.Drawing.Size(306, 23);
+            this.dataPickerA.TabIndex = 23;
+            this.dataPickerA.ValueChanged += new System.EventHandler(this.dataPickerA_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 78);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 15);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Da";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(28, 162);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 15);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "A";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormPrenotazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -455,11 +442,6 @@
         private Label label12;
         private Panel panel3;
         private Label lblErrore;
-        private Button btnSelA;
-        private Button btnSelDa;
-        private Label lblDataA;
-        private Label lblDataDa;
-        private MonthCalendar Calendario;
         private Label label10;
         private Panel panel2;
         private CheckedListBox checkedListBoxServizi;
@@ -480,5 +462,9 @@
         private Button btnIndietro;
         private Button btnPrenota;
         private Panel panel5;
+        private Label label11;
+        private Label label6;
+        private DateTimePicker dataPickerA;
+        private DateTimePicker dataPickerDa;
     }
 }

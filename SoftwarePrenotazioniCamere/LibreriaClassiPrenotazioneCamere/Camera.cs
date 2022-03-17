@@ -7,7 +7,7 @@
         public string Descrizione { get; }
         public bool Tipo { get; }
         public int Prezzo { get; set; }
-        public bool Prenotazione { get; set; }
+        public bool Disponibilità { get; set; }
         public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
