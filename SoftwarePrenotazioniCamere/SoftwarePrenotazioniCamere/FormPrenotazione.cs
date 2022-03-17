@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LibreriaClassiPrenotazioneCamere;
+﻿using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
@@ -15,7 +6,7 @@ namespace SoftwarePrenotazioniCamere
     {
         Albergo albergoGirasole = new Albergo();
         Camera camera;
-        
+
         public FormPrenotazione(Camera c)
         {
             InitializeComponent();
@@ -33,6 +24,8 @@ namespace SoftwarePrenotazioniCamere
 
             checkedListBoxServizi.DataSource = null;
             checkedListBoxServizi.DataSource = camera.Servizi;
+
+            lblPrezzoTotale.Text = camera.Prezzo + "€";
         }
 
         private void btnSelDa_Click_1(object sender, EventArgs e)
@@ -87,30 +80,48 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnIndietro_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void checkedListBoxServizi_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            foreach(Servizio s in camera.Servizi)
+            foreach (Servizio s in camera.Servizi)
             {
-                if(checkedListBoxServizi.SelectedItem.ToString() == s.ToString())
+                
+                if (checkedListBoxServizi.SelectedItem.ToString() == s.ToString())
                 {
-                    listBoxPrezzi.Items.Add($"{s.NomeServizio}: + {s.Prezzo}€");
-                }
-                for(int i = 0; i < listBoxPrezzi.Items.Count; i++)
-                {
-                    if(listBoxPrezzi.Items.Contains(i).ToString() == $"{s.NomeServizio}: + {s.Prezzo}€")
+                    if (ControllaListPrezzi(s))
                     {
-                        listBoxPrezzi.Items.Remove(i);
-                    }
+                        listBoxPrezzi.Items.Add($"{s.NomeServizio}: + {s.Prezzo}€");
+                        camera.Prezzo += s.Prezzo;
+                        s.Attivazione = true;
+                    } 
                 }
+                
             }
+            lblPrezzoTotale.Text = camera.Prezzo + "€";
         }
 
         private void btnPrenota_Click(object sender, EventArgs e)
         {
-            
+            Close();
+        }
+
+        private bool ControllaListPrezzi(Servizio s)
+        {
+            for (int i = 0; i < listBoxPrezzi.Items.Count; i++)
+            {
+                if (listBoxPrezzi.Items[i].ToString() == $"{s.NomeServizio}: + {s.Prezzo}€")
+                {
+                    listBoxPrezzi.Items.RemoveAt(i);
+                    camera.Prezzo -= s.Prezzo;
+                    s.Attivazione = false;
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
+    
 }

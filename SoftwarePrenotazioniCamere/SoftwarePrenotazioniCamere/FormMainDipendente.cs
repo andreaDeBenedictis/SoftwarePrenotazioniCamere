@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.Data;
-using System.Text;
-using LibreriaClassiPrenotazioneCamere;
+﻿using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {

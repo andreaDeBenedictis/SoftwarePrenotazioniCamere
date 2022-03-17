@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibreriaClassiPrenotazioneCamere
+﻿namespace LibreriaClassiPrenotazioneCamere
 {
     public class Prenotazione
     {
@@ -22,7 +16,7 @@ namespace LibreriaClassiPrenotazioneCamere
 
         public override string ToString()
         {
-            return Cliente.ToString() + " " +  Camera.Numero + " " + "Data";
+            return Cliente.ToString() + " " + Camera.Numero + " " + "Data";
         }
     }
 }

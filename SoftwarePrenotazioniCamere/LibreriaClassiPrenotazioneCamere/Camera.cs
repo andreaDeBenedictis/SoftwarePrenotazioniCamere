@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibreriaClassiPrenotazioneCamere
+﻿namespace LibreriaClassiPrenotazioneCamere
 {
     public class Camera
     {
@@ -12,7 +6,7 @@ namespace LibreriaClassiPrenotazioneCamere
         public int Piano { get; }
         public string Descrizione { get; }
         public bool Tipo { get; }
-        public int Prezzo { get; }
+        public int Prezzo { get; set; }
         public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
@@ -25,7 +19,7 @@ namespace LibreriaClassiPrenotazioneCamere
                     "possiedono tutti i servizi principali come la presenza di un tv e del wi-fi gratuito.";
                 Prezzo = 50;
             }
-            else 
+            else
             {
                 Descrizione = "Le nostre camere doppie dispongono " +
                     "di due letti singoli o di un letto matrimoniale. " +
@@ -34,7 +28,7 @@ namespace LibreriaClassiPrenotazioneCamere
 
                 Prezzo = 80;
             }
-            
+
 
             Piano = 0;
             if (Numero >= 100 && Numero < 200) Piano = 1;

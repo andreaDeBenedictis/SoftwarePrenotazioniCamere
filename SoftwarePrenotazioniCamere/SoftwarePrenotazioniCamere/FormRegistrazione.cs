@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LibreriaClassiPrenotazioneCamere;
+﻿using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
@@ -22,7 +13,7 @@ namespace SoftwarePrenotazioniCamere
         private void btnRegistrati_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente
-                ( boxNome.Text,
+                (boxNome.Text,
                   boxCognome.Text,
                   boxPassword.Text,
                   boxEmail.Text,
@@ -31,7 +22,7 @@ namespace SoftwarePrenotazioniCamere
 
             albergoGirasole.AggiungiCliente(c);
 
-            
+
             if (CheckRegistrazione(c))
             {
                 this.Close();
@@ -64,7 +55,7 @@ namespace SoftwarePrenotazioniCamere
                 boxEmail.Text = "";
                 boxTelefono.Text = "";
             }
-            
+
             return available;
         }
 

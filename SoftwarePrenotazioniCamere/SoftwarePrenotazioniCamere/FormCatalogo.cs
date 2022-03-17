@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LibreriaClassiPrenotazioneCamere;
+﻿using LibreriaClassiPrenotazioneCamere;
 
 namespace SoftwarePrenotazioniCamere
 {
@@ -52,14 +43,14 @@ namespace SoftwarePrenotazioniCamere
 
         private void boxListaCamere_DoubleClick(object sender, EventArgs e)
         {
-                foreach (Camera c in camere)
+            foreach (Camera c in camere)
+            {
+                if (c.ToString() == boxListaCamere.SelectedItem.ToString())
                 {
-                    if (c.ToString() == boxListaCamere.SelectedItem.ToString())
-                    {
-                        FormPrenotazione dettagliCamere = new FormPrenotazione(c);
-                        dettagliCamere.ShowDialog();
-                    }
+                    FormPrenotazione dettagliCamere = new FormPrenotazione(c);
+                    dettagliCamere.ShowDialog();
                 }
+            }
         }
 
         private void RiempimentoListaCamere()
