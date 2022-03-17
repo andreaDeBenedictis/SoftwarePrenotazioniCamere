@@ -6,24 +6,32 @@ namespace SoftwarePrenotazioniCamere
     {
         Albergo albergoGirasole = new Albergo();
         Camera camera;
+        Cliente cliente;
 
-        public FormPrenotazione(Camera c)
+        public FormPrenotazione(Camera c, Cliente cliente)
         {
             InitializeComponent();
             camera = c;
+            this.cliente = cliente;
         }
 
         private void FormPrenotazione_Load(object sender, EventArgs e)
         {
             lblPiano.Text = camera.Piano.ToString();
+
             lblNumero.Text = camera.Numero.ToString();
+
             if (camera.Tipo) lblTipologia.Text = "Singola";
             else lblTipologia.Text = "Doppia";
+
             lblPrezzoPerNotte.Text = camera.Prezzo + "€";
+
             lblDescrizione.Text = camera.Descrizione.ToString();
 
             checkedListBoxServizi.DataSource = null;
             checkedListBoxServizi.DataSource = camera.Servizi;
+
+            listBoxPrezzi.Items.Add("Prezzo base: " + camera.Prezzo + "€");
 
             lblPrezzoTotale.Text = camera.Prezzo + "€";
         }
@@ -80,7 +88,8 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnIndietro_Click(object sender, EventArgs e)
         {
-            Close();
+            camera.PrezzoBase();
+            Close(); 
         }
 
         private void checkedListBoxServizi_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -104,6 +113,9 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnPrenota_Click(object sender, EventArgs e)
         {
+            //albergoGirasole.Prenotazioni.Add(new Prenotazione(cliente, camera, /*DateTime, DateTime*/));  MANCANO LE DATE
+
+            camera.Prenotazione = true;
             Close();
         }
 
@@ -122,6 +134,7 @@ namespace SoftwarePrenotazioniCamere
 
             return true;
         }
+
     }
     
 }

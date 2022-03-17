@@ -8,11 +8,14 @@ namespace SoftwarePrenotazioniCamere
 
         List<Camera> camere = new List<Camera>();
 
-        public FormCatalogo()
+        Cliente cliente;
+
+        public FormCatalogo(Cliente c)
         {
             InitializeComponent();
             RiempimentoListaCamere();
             boxListaCamere.Enabled = false;
+            cliente = c;
         }
 
         private void boxListaCamere_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,7 +50,7 @@ namespace SoftwarePrenotazioniCamere
             {
                 if (c.ToString() == boxListaCamere.SelectedItem.ToString())
                 {
-                    FormPrenotazione dettagliCamere = new FormPrenotazione(c);
+                    FormPrenotazione dettagliCamere = new FormPrenotazione(c, cliente);
                     dettagliCamere.ShowDialog();
                 }
             }

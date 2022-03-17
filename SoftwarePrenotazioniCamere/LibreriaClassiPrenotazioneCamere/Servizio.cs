@@ -20,7 +20,7 @@
         public ColazioneInCamera() : base()
         {
             NomeServizio = "Colazione in camera";
-            Prezzo = 15;
+            Prezzo = 25;
         }
     }
     public class MiniBar : Servizio
@@ -28,7 +28,7 @@
         public MiniBar() : base()
         {
             NomeServizio = "Mini bar";
-            Prezzo = 15;
+            Prezzo = 20;
         }
     }
     public class Internet : Servizio
@@ -36,7 +36,7 @@
         public Internet() : base()
         {
             NomeServizio = "Internet";
-            Prezzo = 15;
+            Prezzo = 5;
         }
     }
     public class Culla : Servizio
@@ -44,7 +44,7 @@
         public Culla() : base()
         {
             NomeServizio = "Culla";
-            Prezzo = 15;
+            Prezzo = 10;
         }
     }
 

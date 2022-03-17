@@ -7,6 +7,7 @@
         public string Descrizione { get; }
         public bool Tipo { get; }
         public int Prezzo { get; set; }
+        public bool Prenotazione { get; set; }
         public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
@@ -17,6 +18,7 @@
             {
                 Descrizione = "Le nostre camere singole dispongono di un solo letto singolo e di un bagno." +
                     "possiedono tutti i servizi principali come la presenza di un tv e del wi-fi gratuito.";
+
                 Prezzo = 50;
             }
             else
@@ -57,6 +59,18 @@
             Servizi.Add(new MiniBar());
             Servizi.Add(new Internet());
             Servizi.Add(new ColazioneInCamera());
+        }
+
+        public void PrezzoBase()
+        {
+            if (Tipo == true)
+            {
+                Prezzo = 50;
+            }
+            else
+            {
+                Prezzo = 80;
+            }
         }
     }
 }
