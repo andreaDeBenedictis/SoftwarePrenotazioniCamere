@@ -54,7 +54,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void comboCercaPer_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCerca_Click(object sender, EventArgs e)

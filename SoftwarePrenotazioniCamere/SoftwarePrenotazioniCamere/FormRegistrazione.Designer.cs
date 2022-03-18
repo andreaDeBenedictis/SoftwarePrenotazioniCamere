@@ -45,47 +45,52 @@
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(29, 145);
+            this.label4.Location = new System.Drawing.Point(33, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 22);
+            this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 14;
             this.label4.Text = "Password";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxPassword
             // 
-            this.boxPassword.Location = new System.Drawing.Point(29, 170);
+            this.boxPassword.Location = new System.Drawing.Point(33, 227);
+            this.boxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(400, 23);
-            this.boxPassword.TabIndex = 13;
+            this.boxPassword.Size = new System.Drawing.Size(457, 27);
+            this.boxPassword.TabIndex = 3;
             // 
             // label3
             // 
+            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(29, 94);
+            this.label3.Location = new System.Drawing.Point(33, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 22);
+            this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 12;
             this.label3.Text = "Cognome";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxCognome
             // 
-            this.boxCognome.Location = new System.Drawing.Point(29, 119);
+            this.boxCognome.Location = new System.Drawing.Point(33, 159);
+            this.boxCognome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxCognome.Name = "boxCognome";
-            this.boxCognome.Size = new System.Drawing.Size(400, 23);
-            this.boxCognome.TabIndex = 11;
+            this.boxCognome.Size = new System.Drawing.Size(457, 27);
+            this.boxCognome.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(29, 43);
+            this.label2.Location = new System.Drawing.Point(33, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 22);
+            this.label2.Size = new System.Drawing.Size(64, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,65 +99,72 @@
             // 
             this.btnRegistrati.BackColor = System.Drawing.Color.White;
             this.btnRegistrati.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrati.Location = new System.Drawing.Point(74, 339);
+            this.btnRegistrati.Location = new System.Drawing.Point(85, 452);
+            this.btnRegistrati.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrati.Name = "btnRegistrati";
-            this.btnRegistrati.Size = new System.Drawing.Size(311, 50);
-            this.btnRegistrati.TabIndex = 9;
+            this.btnRegistrati.Size = new System.Drawing.Size(355, 67);
+            this.btnRegistrati.TabIndex = 6;
             this.btnRegistrati.Text = "Registrati";
             this.btnRegistrati.UseVisualStyleBackColor = false;
             this.btnRegistrati.Click += new System.EventHandler(this.btnRegistrati_Click);
             // 
             // boxNome
             // 
-            this.boxNome.Location = new System.Drawing.Point(29, 68);
+            this.boxNome.Location = new System.Drawing.Point(33, 91);
+            this.boxNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxNome.Name = "boxNome";
-            this.boxNome.Size = new System.Drawing.Size(400, 23);
-            this.boxNome.TabIndex = 8;
+            this.boxNome.Size = new System.Drawing.Size(457, 27);
+            this.boxNome.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(29, 196);
+            this.label1.Location = new System.Drawing.Point(33, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 22);
+            this.label1.Size = new System.Drawing.Size(60, 21);
             this.label1.TabIndex = 16;
             this.label1.Text = "Email";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxEmail
             // 
-            this.boxEmail.Location = new System.Drawing.Point(29, 221);
+            this.boxEmail.Location = new System.Drawing.Point(33, 295);
+            this.boxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxEmail.Name = "boxEmail";
-            this.boxEmail.Size = new System.Drawing.Size(400, 23);
-            this.boxEmail.TabIndex = 15;
+            this.boxEmail.Size = new System.Drawing.Size(457, 27);
+            this.boxEmail.TabIndex = 4;
             // 
             // label5
             // 
+            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(29, 247);
+            this.label5.Location = new System.Drawing.Point(33, 338);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 22);
+            this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 18;
             this.label5.Text = "Telefono";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxTelefono
             // 
-            this.boxTelefono.Location = new System.Drawing.Point(29, 272);
+            this.boxTelefono.Location = new System.Drawing.Point(33, 363);
+            this.boxTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxTelefono.Name = "boxTelefono";
-            this.boxTelefono.Size = new System.Drawing.Size(400, 23);
-            this.boxTelefono.TabIndex = 17;
+            this.boxTelefono.Size = new System.Drawing.Size(457, 27);
+            this.boxTelefono.TabIndex = 5;
             // 
             // btnIndietro
             // 
             this.btnIndietro.BackColor = System.Drawing.Color.White;
             this.btnIndietro.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnIndietro.Location = new System.Drawing.Point(348, 12);
+            this.btnIndietro.Location = new System.Drawing.Point(398, 16);
+            this.btnIndietro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIndietro.Name = "btnIndietro";
-            this.btnIndietro.Size = new System.Drawing.Size(81, 36);
-            this.btnIndietro.TabIndex = 20;
+            this.btnIndietro.Size = new System.Drawing.Size(93, 48);
+            this.btnIndietro.TabIndex = 7;
             this.btnIndietro.Text = "Indietro";
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
@@ -160,18 +172,18 @@
             // lblError
             // 
             this.lblError.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblError.Location = new System.Drawing.Point(74, 298);
+            this.lblError.Location = new System.Drawing.Point(85, 397);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(311, 38);
+            this.lblError.Size = new System.Drawing.Size(355, 51);
             this.lblError.TabIndex = 21;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRegistrazione
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(459, 419);
+            this.ClientSize = new System.Drawing.Size(525, 559);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.label5);
@@ -185,6 +197,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegistrati);
             this.Controls.Add(this.boxNome);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegistrazione";
             this.Text = "FormRegistrazione";
             this.ResumeLayout(false);
