@@ -6,6 +6,7 @@ namespace SoftwarePrenotazioniCamere
     {
         //istanzazione oggetto "albergoGirasole"
         Albergo albergoGirasole = new Albergo();
+        int tipoRicerca = 0;
 
         public FormMainDipendente()
         {
@@ -14,18 +15,42 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnVisualizzaPrenotazioni_Click(object sender, EventArgs e)
         {
+            tipoRicerca = 1;
             listBoxVisualizzaSelezioni.DataSource = null;
-            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Prenotazioni;
+
+            List<string> stringList = new List<string>();
+
+            foreach (Prenotazione prenotazione in albergoGirasole.Prenotazioni)
+            {
+                stringList.Add
+                    (
+                    $"Nome: {prenotazione.Cliente.Nome}   Cognome: {prenotazione.Cliente.Cognome}   Email: {prenotazione.Cliente.Email}   " + 
+                    $"Password: {prenotazione.Cliente.Password}   N.Telefono: {prenotazione.Cliente.RecapitoTelefonico} " +
+                    $"Data inizio: {prenotazione.DataInizio.Day}\\{prenotazione.DataInizio.Month}\\{prenotazione.DataInizio.Year}  " +
+                    $"Data fine: {prenotazione.DataFine.Day}\\{prenotazione.DataFine.Month}\\{prenotazione.DataFine.Year}"
+                    );
+            }
+
+            listBoxVisualizzaSelezioni.DataSource = stringList;
         }
 
         private void btnVisualizzaClienti_Click(object sender, EventArgs e)
         {
+            tipoRicerca = 2;
             listBoxVisualizzaSelezioni.DataSource = null;
-            listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Clienti;
+            List<string> stringList = new List<string>();
+
+            foreach (Cliente c in albergoGirasole.Clienti)
+            {
+                stringList.Add("Nome: " + c.Nome + "   Cognome: " + c.Cognome + "   Email: " + c.Email + "   Password: " + c.Password + "   N.Telefono: " + c.RecapitoTelefonico);
+            }
+
+            listBoxVisualizzaSelezioni.DataSource = stringList;
         }
 
         private void btnVisualizzaDisponibilitàCamere_Click(object sender, EventArgs e)
         {
+            tipoRicerca = 3;
             listBoxVisualizzaSelezioni.DataSource = null;
             listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano1;
 
@@ -52,23 +77,32 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano3;
         }
 
-        private void comboCercaPer_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnCerca_Click(object sender, EventArgs e)
         {
-            List<Cliente> listaRicerca = new List<Cliente>();
-            foreach (Cliente c in listBoxVisualizzaSelezioni.Items)
+            foreach (var item in listBoxVisualizzaSelezioni.Items)
             {
-                if (c.ToString() == boxRicerca.Text)
+                if (item.ToString() == boxRicerca.Text)
                 {
-                    listaRicerca.Add(c);
+                    listBoxVisualizzaSelezioni.Items.Remove(item);
+                    listBoxVisualizzaSelezioni.Items.Add(item);
                 }
             }
-            listBoxVisualizzaSelezioni.DataSource = null;
-            listBoxVisualizzaSelezioni.DataSource = listaRicerca;
+            switch (tipoRicerca)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void comboRicerca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
