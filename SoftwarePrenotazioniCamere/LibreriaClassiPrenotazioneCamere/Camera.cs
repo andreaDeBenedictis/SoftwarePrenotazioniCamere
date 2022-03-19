@@ -5,9 +5,9 @@
         public int Numero { get; }
         public int Piano { get; }
         public string Descrizione { get; }
-        public bool Tipo { get; }
+        public bool Tipo { get; } // se è true la camera è singola se è false la camera è doppia
         public int Prezzo { get; set; }
-        public bool Disponibilità { get; set; }
+        public bool Disponibilità { get; set; } // se è true la camera è prenotata, se è false la camera è disponibile
         public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
@@ -38,7 +38,7 @@
             if (Numero >= 300) Piano = 3;
 
             Servizi = new List<Servizio>();
-            RiempiListaServizi();
+            RiempiListaServizi(); // riempie la lista dei servizi con tutti i servizi
         }
 
         public override string ToString()
@@ -61,7 +61,7 @@
             Servizi.Add(new ColazioneInCamera());
         }
 
-        public void PrezzoBase()
+        public void ResettaCamera() //resetta il prezzo della camera e resetta i servizi
         {
             if (Tipo == true)
             {
@@ -70,6 +70,10 @@
             else
             {
                 Prezzo = 80;
+            }
+            foreach(Servizio s in Servizi)
+            {
+                s.Attivazione = false;
             }
         }
     }

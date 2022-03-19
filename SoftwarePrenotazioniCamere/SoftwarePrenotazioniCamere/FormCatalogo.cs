@@ -13,9 +13,14 @@ namespace SoftwarePrenotazioniCamere
         public FormCatalogo(Cliente c)
         {
             InitializeComponent();
-            RiempimentoListaCamere();
-            boxListaCamere.Enabled = false;
+            RiempimentoListaCamere(); // riempie una lista delle camere con le 3 liste dei piani
             cliente = c;
+        }
+
+        private void FormCatalogo_Load(object sender, EventArgs e) // carica nella lista le camere del primo piano
+        {
+            boxListaCamere.DataSource = null;
+            boxListaCamere.DataSource = albergoGirasole.Piano1;
         }
 
         private void boxListaCamere_SelectedIndexChanged(object sender, EventArgs e)
@@ -23,28 +28,25 @@ namespace SoftwarePrenotazioniCamere
 
         }
 
-        private void btnPiano1_Click(object sender, EventArgs e)
+        private void btnPiano1_Click(object sender, EventArgs e) // carica le camere del primo piano
         {
-            boxListaCamere.Enabled = true;
             boxListaCamere.DataSource = null;
             boxListaCamere.DataSource = albergoGirasole.Piano1;
         }
 
-        private void btnPiano2_Click(object sender, EventArgs e)
+        private void btnPiano2_Click(object sender, EventArgs e) // carica le camere del secondo piano
         {
-            boxListaCamere.Enabled = true;
             boxListaCamere.DataSource = null;
             boxListaCamere.DataSource = albergoGirasole.Piano2;
         }
 
-        private void btnPiano3_Click(object sender, EventArgs e)
+        private void btnPiano3_Click(object sender, EventArgs e) // carica le camere del terzo piano
         {
-            boxListaCamere.Enabled = true;
             boxListaCamere.DataSource = null;
             boxListaCamere.DataSource = albergoGirasole.Piano3;
         }
 
-        private void boxListaCamere_DoubleClick(object sender, EventArgs e)
+        private void boxListaCamere_DoubleClick(object sender, EventArgs e) // apre la form Prenotazione della camera selezionata
         {
             foreach (Camera c in camere)
             {
@@ -56,7 +58,7 @@ namespace SoftwarePrenotazioniCamere
             }
         }
 
-        private void RiempimentoListaCamere()
+        private void RiempimentoListaCamere() 
         {
             foreach (Camera c in albergoGirasole.Piano1)
             {
@@ -73,6 +75,7 @@ namespace SoftwarePrenotazioniCamere
                 camere.Add(c);
             }
         }
+
 
     }
 }

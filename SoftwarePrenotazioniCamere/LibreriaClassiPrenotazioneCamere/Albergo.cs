@@ -23,7 +23,7 @@
             Piano2 = new List<Camera>();
             Piano3 = new List<Camera>();
 
-            RiempiListaCamere();
+            RiempiListaCamere(); // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
         }
         public void AggiungiPrenotazione(Prenotazione prenotazione)
         {
@@ -68,7 +68,7 @@
             }
         }
 
-        public void RiempiListaCamere() //Riempimento lista camere
+        public void RiempiListaCamere() // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
         {
             for (int i = 0; i < 11; i++)
             {
