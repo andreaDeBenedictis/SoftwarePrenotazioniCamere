@@ -1,7 +1,10 @@
+using LibreriaClassiPrenotazioneCamere;
+
 namespace SoftwarePrenotazioniCamere
 {
     public partial class FormMain : Form
     {
+        Albergo albergoGirasole = new Albergo();
         public FormMain()
         {
             InitializeComponent();
@@ -15,7 +18,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            FormAccesso formAccesso = new FormAccesso();
+            FormAccesso formAccesso = new FormAccesso(albergoGirasole);
             formAccesso.ShowDialog();
         }
 
@@ -23,6 +26,11 @@ namespace SoftwarePrenotazioniCamere
         {
             FormRegistrazione formRegistrazione = new FormRegistrazione();
             formRegistrazione.ShowDialog();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

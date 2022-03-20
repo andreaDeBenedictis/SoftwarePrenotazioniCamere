@@ -5,6 +5,7 @@
 
         public List<Prenotazione> Prenotazioni { get; }
         public List<Cliente> Clienti { get; }
+        public List<Camera> Camere { get; }
         public List<Camera> Piano1 { get; }
         public List<Camera> Piano2 { get; }
         public List<Camera> Piano3 { get; }
@@ -23,7 +24,11 @@
             Piano2 = new List<Camera>();
             Piano3 = new List<Camera>();
 
-            RiempiListaCamere(); // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
+            RiempiListaCamerePiani(); // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
+
+            Camere = new List<Camera>();
+
+            RiempimentoListaCamere();
         }
         public void AggiungiPrenotazione(Prenotazione prenotazione)
         {
@@ -68,7 +73,7 @@
             }
         }
 
-        public void RiempiListaCamere() // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
+        public void RiempiListaCamerePiani() // riempie le liste delle camere (piano 1, piano2 e piano 3) in base al piano
         {
             for (int i = 0; i < 11; i++)
             {
@@ -127,6 +132,34 @@
         public void ControlloDateDisponibili()
         {
 
+        }
+        private void RiempimentoListaCamere()
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                if (i <= 5 && i != 0)
+                {
+                    Camera c1 = new Camera(100 + i, true);
+                    Camere.Add(c1);
+
+                    Camera c2 = new Camera(200 + i, true);
+                    Camere.Add(c2);
+
+                    Camera c3 = new Camera(300 + i, true);
+                    Camere.Add(c3);
+                }
+                else if (i > 5 && i != 0)
+                {
+                    Camera c1 = new Camera(100 + i, false);
+                    Camere.Add(c1);
+
+                    Camera c2 = new Camera(200 + i, false);
+                    Camere.Add(c2);
+
+                    Camera c3 = new Camera(300 + i, false);
+                    Camere.Add(c3);
+                }
+            }
         }
     }
 }

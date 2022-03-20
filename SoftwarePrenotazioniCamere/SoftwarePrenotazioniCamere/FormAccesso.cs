@@ -4,12 +4,13 @@ namespace SoftwarePrenotazioniCamere
 {
     public partial class FormAccesso : Form
     {
-        public FormAccesso()
+        Albergo albergoGirasole = new Albergo();
+        public FormAccesso(Albergo al)
         {
             InitializeComponent();
+            albergoGirasole = al;
         }
-
-        Albergo albergoGirasole = new Albergo();
+        
         private void btnAccedi_Click(object sender, EventArgs e)
         {
 
@@ -17,7 +18,7 @@ namespace SoftwarePrenotazioniCamere
             {
                 if (boxEmail.Text == c.Email && boxPassword.Text == c.Password)
                 {
-                    FormCatalogo formCatalogo = new FormCatalogo(c);
+                    FormCatalogo formCatalogo = new FormCatalogo(c, albergoGirasole);
                     formCatalogo.ShowDialog();
                 }
             }

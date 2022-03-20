@@ -42,7 +42,7 @@
             this.boxListaCamere.IntegralHeight = false;
             this.boxListaCamere.ItemHeight = 31;
             this.boxListaCamere.Location = new System.Drawing.Point(24, 19);
-            this.boxListaCamere.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.boxListaCamere.Margin = new System.Windows.Forms.Padding(2);
             this.boxListaCamere.Name = "boxListaCamere";
             this.boxListaCamere.Size = new System.Drawing.Size(400, 282);
             this.boxListaCamere.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.btnPiano1.BackColor = System.Drawing.Color.White;
             this.btnPiano1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPiano1.Location = new System.Drawing.Point(482, 19);
-            this.btnPiano1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPiano1.Margin = new System.Windows.Forms.Padding(2);
             this.btnPiano1.Name = "btnPiano1";
             this.btnPiano1.Size = new System.Drawing.Size(218, 49);
             this.btnPiano1.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.btnPiano3.BackColor = System.Drawing.Color.White;
             this.btnPiano3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPiano3.Location = new System.Drawing.Point(482, 252);
-            this.btnPiano3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPiano3.Margin = new System.Windows.Forms.Padding(2);
             this.btnPiano3.Name = "btnPiano3";
             this.btnPiano3.Size = new System.Drawing.Size(218, 49);
             this.btnPiano3.TabIndex = 3;
@@ -80,7 +80,7 @@
             this.btnPiano2.BackColor = System.Drawing.Color.White;
             this.btnPiano2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPiano2.Location = new System.Drawing.Point(482, 139);
-            this.btnPiano2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPiano2.Margin = new System.Windows.Forms.Padding(2);
             this.btnPiano2.Name = "btnPiano2";
             this.btnPiano2.Size = new System.Drawing.Size(218, 49);
             this.btnPiano2.TabIndex = 2;
@@ -93,12 +93,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(748, 318);
+            this.ClientSize = new System.Drawing.Size(733, 325);
             this.Controls.Add(this.btnPiano2);
             this.Controls.Add(this.btnPiano3);
             this.Controls.Add(this.btnPiano1);
             this.Controls.Add(this.boxListaCamere);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCatalogo";
             this.Text = "FormCatalogo";
             this.Load += new System.EventHandler(this.FormCatalogo_Load);

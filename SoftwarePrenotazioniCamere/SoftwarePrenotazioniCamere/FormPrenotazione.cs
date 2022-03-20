@@ -104,6 +104,7 @@ namespace SoftwarePrenotazioniCamere
         {
             Prenotazione prenotazione = new Prenotazione(cliente, camera, dataPickerDa.Value, dataPickerA.Value);
             albergoGirasole.AggiungiPrenotazione(prenotazione);
+            camera.Disponibilità = true;
 
             StreamWriter sw = File.AppendText(albergoGirasole.GetPathPrenotazioni());
             sw.WriteLine(prenotazione.ToString());

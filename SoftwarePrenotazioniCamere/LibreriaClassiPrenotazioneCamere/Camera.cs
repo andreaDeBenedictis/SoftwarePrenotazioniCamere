@@ -43,13 +43,20 @@
 
         public override string ToString()
         {
-            if (Tipo)
+            if (!Disponibilità)
             {
-                return "Camera " + Numero + ". Singola, 1 letto, 1 bagno";
+                if (Tipo)
+                {
+                    return "Camera " + Numero + ". Singola, 1 letto, 1 bagno";
+                }
+                else
+                {
+                    return "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
+                }
             }
             else
             {
-                return "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
+                return "Camera " + Numero + ". Prenotata";
             }
         }
 
