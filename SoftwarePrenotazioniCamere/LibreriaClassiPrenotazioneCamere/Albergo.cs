@@ -29,6 +29,8 @@
             Camere = new List<Camera>();
 
             RiempimentoListaCamere();
+
+            SetDisponibilitàCamere();
         }
         public void AggiungiPrenotazione(Prenotazione prenotazione)
         {
@@ -161,5 +163,23 @@
                 }
             }
         }
+
+        public void SetDisponibilitàCamere()
+        {
+            foreach (string line in File.ReadLines(GetPathPrenotazioni()))
+            {
+
+                string[] lines = line.Split(";");
+
+                foreach (Camera c in Camere)
+                {
+                    if (c.Numero.ToString() == lines[5])
+                    {
+                        c.Disponibilità = false;
+                    }
+                }
+            }
+        }
+
     }
 }

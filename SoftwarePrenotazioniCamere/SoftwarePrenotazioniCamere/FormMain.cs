@@ -18,7 +18,7 @@ namespace SoftwarePrenotazioniCamere
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            FormAccesso formAccesso = new FormAccesso(albergoGirasole);
+            FormAccesso formAccesso = new FormAccesso();
             formAccesso.ShowDialog();
         }
 

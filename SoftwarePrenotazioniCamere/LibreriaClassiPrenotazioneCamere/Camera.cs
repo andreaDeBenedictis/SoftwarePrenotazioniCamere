@@ -4,16 +4,67 @@
     {
         public int Numero { get; }
         public int Piano { get; }
-        public string Descrizione { get; }
+        public string Descrizione { get; set;}
         public bool Tipo { get; } // se è true la camera è singola se è false la camera è doppia
         public int Prezzo { get; set; }
-        public bool Disponibilità { get; set; } // se è true la camera è prenotata, se è false la camera è disponibile
+        public bool Disponibilità { get; set; } // se è false la camera è prenotata, se è true la camera è disponibile
         public List<Servizio> Servizi { get; }
         public Camera(int n, bool t)
         {
+            Disponibilità = true;
+
             Numero = n;
+
             Tipo = t;
 
+            Descrizione = "";
+            SetDati();
+
+            Piano = 0;
+            if (Numero >= 100 && Numero < 200) Piano = 1;
+            if (Numero >= 200 && Numero < 300) Piano = 2;
+            if (Numero >= 300) Piano = 3;
+
+            Servizi = new List<Servizio>();
+            RiempiListaServizi(); // riempie la lista dei servizi con tutti i servizi
+        }
+
+        public override string ToString()
+        {
+            if (Disponibilità)
+            {
+                if (Tipo)
+                {
+                    return "Camera " + Numero + " - Singola - Disponibile";
+                }
+                else
+                {
+                    return "Camera " + Numero + " - Doppia - Disponibile";
+                }
+            }
+            else
+            {
+                if (Tipo)
+                {
+                    return "Camera " + Numero + " - Singola - Prenotata";
+                }
+                else
+                {
+                    return "Camera " + Numero + " - Doppia - Prenotata";
+                }
+            }
+        }
+
+        public void RiempiListaServizi()
+        {
+            Servizi.Add(new Culla());
+            Servizi.Add(new MiniBar());
+            Servizi.Add(new Internet());
+            Servizi.Add(new ColazioneInCamera());
+        }
+
+        public void SetDati()
+        {
             if (Tipo)
             {
                 Descrizione = "Le nostre camere singole dispongono di un solo letto singolo e di un bagno." +
@@ -30,42 +81,6 @@
 
                 Prezzo = 80;
             }
-
-
-            Piano = 0;
-            if (Numero >= 100 && Numero < 200) Piano = 1;
-            if (Numero >= 200 && Numero < 300) Piano = 2;
-            if (Numero >= 300) Piano = 3;
-
-            Servizi = new List<Servizio>();
-            RiempiListaServizi(); // riempie la lista dei servizi con tutti i servizi
-        }
-
-        public override string ToString()
-        {
-            if (!Disponibilità)
-            {
-                if (Tipo)
-                {
-                    return "Camera " + Numero + ". Singola, 1 letto, 1 bagno";
-                }
-                else
-                {
-                    return "Camera " + Numero + ". Doppia, 2 letti, 1 bagno";
-                }
-            }
-            else
-            {
-                return "Camera " + Numero + ". Prenotata";
-            }
-        }
-
-        public void RiempiListaServizi()
-        {
-            Servizi.Add(new Culla());
-            Servizi.Add(new MiniBar());
-            Servizi.Add(new Internet());
-            Servizi.Add(new ColazioneInCamera());
         }
 
         public void ResettaCamera() //resetta il prezzo della camera e resetta i servizi

@@ -4,23 +4,22 @@ namespace SoftwarePrenotazioniCamere
 {
     public partial class FormCatalogo : Form
     {
-        Albergo albergoGirasole;
+        Albergo albergoGirasole = new Albergo();
 
         Cliente cliente;
 
-        public FormCatalogo(Cliente c, Albergo al)
+        public FormCatalogo(Cliente c)
         {
             InitializeComponent();
             
             cliente = c;
-            albergoGirasole = al;
         }
 
         private void FormCatalogo_Load(object sender, EventArgs e) // carica nella lista le camere del primo piano
         {
             foreach(Camera cam in albergoGirasole.Camere)
             {
-                if (!cam.Disponibilità && cam.Piano == 1)
+                if (cam.Piano == 1)
                 {
                     boxListaCamere.Items.Add(cam);
                 }
@@ -38,7 +37,7 @@ namespace SoftwarePrenotazioniCamere
 
             foreach (Camera cam in albergoGirasole.Camere)
             {
-                if (!cam.Disponibilità && cam.Piano == 1)
+                if (cam.Piano == 1)
                 {
                     boxListaCamere.Items.Add(cam);
                 }
@@ -51,7 +50,7 @@ namespace SoftwarePrenotazioniCamere
 
             foreach (Camera cam in albergoGirasole.Camere)
             {
-                if (!cam.Disponibilità && cam.Piano == 2)
+                if (cam.Piano == 2)
                 {
                     boxListaCamere.Items.Add(cam);
                 }
@@ -64,7 +63,7 @@ namespace SoftwarePrenotazioniCamere
 
             foreach (Camera cam in albergoGirasole.Camere)
             {
-                if (!cam.Disponibilità && cam.Piano == 3)
+                if (cam.Piano == 3)
                 {
                     boxListaCamere.Items.Add(cam);
                 }
@@ -75,10 +74,12 @@ namespace SoftwarePrenotazioniCamere
         {
             foreach (Camera c in albergoGirasole.Camere)
             {
-                if (c.ToString() == boxListaCamere.SelectedItem.ToString())
+                if (c.ToString() == boxListaCamere.SelectedItem.ToString() && c.Disponibilità)
                 {
                     FormPrenotazione dettagliCamere = new FormPrenotazione(c, cliente);
                     dettagliCamere.ShowDialog();
+
+                    Close();
                 }
             }
         }

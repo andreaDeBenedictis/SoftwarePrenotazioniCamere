@@ -20,16 +20,7 @@ namespace SoftwarePrenotazioniCamere
 
             List<string> stringList = new List<string>();
 
-            foreach (Prenotazione prenotazione in albergoGirasole.Prenotazioni)
-            {
-                stringList.Add
-                    (
-                    $"Nome: {prenotazione.Cliente.Nome}   Cognome: {prenotazione.Cliente.Cognome}   Email: {prenotazione.Cliente.Email}   " + 
-                    $"Password: {prenotazione.Cliente.Password}   N.Telefono: {prenotazione.Cliente.RecapitoTelefonico} " +
-                    $"Data inizio: {prenotazione.DataInizio.Day}\\{prenotazione.DataInizio.Month}\\{prenotazione.DataInizio.Year}  " +
-                    $"Data fine: {prenotazione.DataFine.Day}\\{prenotazione.DataFine.Month}\\{prenotazione.DataFine.Year}"
-                    );
-            }
+            SetNomeListaPrenotazioni(stringList);
 
             listBoxVisualizzaSelezioni.DataSource = stringList;
         }
@@ -40,10 +31,7 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.DataSource = null;
             List<string> stringList = new List<string>();
 
-            foreach (Cliente c in albergoGirasole.Clienti)
-            {
-                stringList.Add("Nome: " + c.Nome + "   Cognome: " + c.Cognome + "   Email: " + c.Email + "   Password: " + c.Password + "   N.Telefono: " + c.RecapitoTelefonico);
-            }
+            SetNomeListaClienti(stringList);
 
             listBoxVisualizzaSelezioni.DataSource = stringList;
         }
@@ -77,32 +65,26 @@ namespace SoftwarePrenotazioniCamere
             listBoxVisualizzaSelezioni.DataSource = albergoGirasole.Piano3;
         }
 
-        private void btnCerca_Click(object sender, EventArgs e)
+        public void SetNomeListaClienti(List<string> list)
         {
-            foreach (var item in listBoxVisualizzaSelezioni.Items)
+            foreach (Cliente c in albergoGirasole.Clienti)
             {
-                if (item.ToString() == boxRicerca.Text)
-                {
-                    listBoxVisualizzaSelezioni.Items.Remove(item);
-                    listBoxVisualizzaSelezioni.Items.Add(item);
-                }
-            }
-            switch (tipoRicerca)
-            {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
+                list.Add("Nome: " + c.Nome + "   Cognome: " + c.Cognome + "   Email: " + c.Email + "   Password: " + c.Password + "   N.Telefono: " + c.RecapitoTelefonico);
             }
         }
 
-        private void comboRicerca_SelectedIndexChanged(object sender, EventArgs e)
+        public void SetNomeListaPrenotazioni(List<string> list)
         {
-
+            foreach (Prenotazione p in albergoGirasole.Prenotazioni)
+            {
+                list.Add
+                    (
+                    $"Nome: {p.Cliente.Nome}   Cognome: {p.Cliente.Cognome}   Email: {p.Cliente.Email}   " +
+                    $"Password: {p.Cliente.Password}   N.Telefono: {p.Cliente.RecapitoTelefonico} " +
+                    $"Data inizio: {p.DataInizio.Day}\\{p.DataInizio.Month}\\{p.DataInizio.Year}  " +
+                    $"Data fine: {p.DataFine.Day}\\{p.DataFine.Month}\\{p.DataFine.Year}"
+                    );
+            }
         }
     }
 }
