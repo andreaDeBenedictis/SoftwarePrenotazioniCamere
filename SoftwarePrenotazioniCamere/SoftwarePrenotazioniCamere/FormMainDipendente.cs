@@ -80,7 +80,7 @@ namespace SoftwarePrenotazioniCamere
                 list.Add
                     (
                     $"Nome: {p.Cliente.Nome}   Cognome: {p.Cliente.Cognome}   Email: {p.Cliente.Email}   " +
-                    $"Password: {p.Cliente.Password}   N.Telefono: {p.Cliente.RecapitoTelefonico} " +
+                    $"Password: {p.Cliente.Password}   N.Telefono: {p.Cliente.RecapitoTelefonico}   Camera: {p.Camera.Numero}   " +
                     $"Data inizio: {p.DataInizio.Day}\\{p.DataInizio.Month}\\{p.DataInizio.Year}  " +
                     $"Data fine: {p.DataFine.Day}\\{p.DataFine.Month}\\{p.DataFine.Year}"
                     );
